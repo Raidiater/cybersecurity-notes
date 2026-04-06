@@ -62,24 +62,40 @@ was successful, and then removed it afterwards.
 text back to the terminal, and expr performs mathematical calculations. These 
 are foundational commands for writing bash scripts later on.
 
-(ss)
+![Using the echo command](assets/echo-command.png)
+![Expr command practice](assets/expr-command.png)
 
 ### Module 3 - Linux commands in the Bash shell
 - In this lab we practiced navigating the Linux file system using core commands. Used pwd to check the current directory, ls to list contents, and cd to move between directories. We also used cat to read file contents and practiced writing absolute paths from the home directory.
-(ss)
+
+![Doing basic navigation](assets/basic-navigation.png)
+![Viewing file contents](assets/absolute-path-and-cat.png)
+
 
 - We then covered filtering commands using grep to search for specific patterns inside files like finding the word "error" in server_logs.txt. Also used piping with the | symbol to chain commands together for more specific results.
 
-(ss)
+![Basic filtering](assets/grep-filter.png)
+![Filtering with grep and piping](assets/grep-piping.png)
+![More filtering with grep and piping](assets/more-grep-filtering.png)
 
 - In this lab we created and removed directories using mkdir and rmdir, and moved files between directories using the mv command. We then deleted a file called tempnotes.txt using rm and created a new file called tasks.txt using touch.Finally we edited tasks.txt using the nano text editor and verified the changes were saved using cat.
 
-(ss) 
+![Adding and removing directories](assets/mkdir-rmdir.png)
+![Moving a file](assets/mv-move.png)
+![Removing and creating a file](assets/rm-touch.png)
+![Editing a file](assets/nano-editior.png)
+![Output of the file](assets/nano-output-cat.png)
 
 - In the next lab we worked with file permissions to control who has access to what. We used ls -l to view permissions on files inside the permissions directory, and ls -la to also reveal hidden files. After reviewing the permissions we used chmod to modify them, specifically using chmod o-w to remove the write permission from the owner on specific files.
 
-(ss)
+![Showing permissions of the files](assets/showing-permissions.png)
+![Changing the permissions of the files](assets/changing-permissions.png)
+![Revealing and changing permissions of hidden files](assets/hidden-file-change.png)
+
 
 - In the next lab of this module we managed users and groups. We created a new user called researcher9 using sudo useradd, then added them to the research_team group using sudo usermod -g. We assigned file ownership of project_r.txt to that user using chown, and added them to a secondary group called sales_team. When deleting the user with userdel ran into an issue since the user wasn't in a primary group, so we used groupdel instead to remove the group.
 
-(ss)
+![Creating, assigning, and removing the user](assets/new-user.png)
+
+### Module 4 - Databases and SQL
+- 
