@@ -39,6 +39,11 @@ Examples: HIPAA, GDPR, PCI-DSS.
 The practice of securing information by transforming it into an unreadable format.
 Used to protect data in transit and at rest.
 
+### chmod
+Command used to change file permissions in Linux.
+Controls read, write, and execute access for owner, group, and others.
+Core skill for SOC analysts managing system access controls.
+
 ## D
 ### Data Breach
 An incident where unauthorized individuals gain access to sensitive or confidential data.
@@ -69,6 +74,9 @@ Acts as a barrier between trusted and untrusted networks.
 ### Framework
 A set of guidelines and best practices for managing cybersecurity risk.
 Examples: NIST CSF, ISO 27001.
+
+### Foreign Key
+a column in a table that is a primary key in another table
 
 ## I
 ### IDS (Intrusion Detection System)
@@ -127,6 +135,13 @@ One of the most common attack vectors SOC analysts deal with.
 Users should only have access to what they need to do their job and nothing more.
 Reduces the impact of compromised accounts.
 
+### Primary Key
+a column where every row has a unique entry
+
+## Q
+### Query
+A request for data from a database table or a combination of tables
+
 ## R
 ### Ransomware
 Malware that encrypts a victim's files and demands payment for the decryption key.
@@ -154,6 +169,10 @@ Examples: phishing, pretexting, baiting.
 ### SQL Injection
 An attack where malicious SQL code is inserted into a query to manipulate a database.
 Mitigated by input validation and parameterized queries.
+
+### sudo 
+Allows a permitted user to run commands as a superuser or another user.
+Used when administrative privileges are required for system changes.
 
 ## T
 ### TCP/IP

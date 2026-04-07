@@ -33,7 +33,7 @@
 - Discussed VPNs and how they encrypt traffic to protect data in transit
 - Introduced the concept of network hardening including closing unnecessary ports and keeping systems patched
 
-## 🔄 Course 4 - Tools of the Trade: Linux and SQL *(In Progress)*
+## ✅ Course 4 - Tools of the Trade: Linux and SQL 
 ### Key Concepts
 - This course we go into learning and getting hands on expierence with the operating system
 - The OS (operating system) we learn in this course is Linux, we learn the basic command lines in the bash shell
@@ -98,4 +98,35 @@ are foundational commands for writing bash scripts later on.
 ![Creating, assigning, and removing the user](assets/new-user.png)
 
 ### Module 4 - Databases and SQL
+- In our first lab of this module we start getting some first expierence with using SQL queries. We use SELECT to retrieve the columns and then FROM to retrieve the date from the table. For this instance we are getting records of the login date and login time and then using ORDER BY to have those at the top. 
+
+![Getting log in attempts from database](assets/log-in-attempts.png)
+![Ordering by the login date](assets/order-by-login-date.png)
+![Filtering the login date and login time](assets/filtering-login-date-login-time.png)
+
+- In this next lab we work with the WHERE and LIKE operator for more specific filtering in SQL databases. We use WHERE to pull specific columns from the specific table in SQL and we use the LIKE operator to type in a word with a percentage symbol to find a matching pattern. 
+
+![Finding a specific word](assets/more-sql-filter.png)
+![Finding the specific pattern](assets/like-operator-percen.png)
+
+- This lab we focused on finding data with dates and times, either using a less then, greater than, or even less than and equal too or greater than and equal too symbols to determine data either after or before those times and and dates. We also used the BETWEEN operator to find data inbetween two times or dates to pull even more specific data from the tables. 
+
+![Finding data after a specific date](assets/data-after-date.png)
+![Pulling data between two different times](assets/between-time.png)
+
+- Next lab we use the operators AND, OR, and NOT to filter out stuff even more specific data we need to find. Like finding failed login attempts before a specific time and to see if it actually failed and how many attempts where there. Or finding a specific department with a specific office and even excluding a department. 
+
+![Failed login attempts after 18:00](assets/failed_login_attempts.png)
+![Finding a specific department within an office](assets/finding-department-and-where-office.png)
+![Excluding IT](assets/anywhere-but-IT.png)
+
+- In this final lab we use 3 forms of joining tables, the INNER JOIN, RIGHT JOIN, and LEFT JOIN, this lab didn't include the FULL OUTER JOIN but it wasn't needed for the scenario. 
+
+![Inner join](assets/inner-join.png)
+![Left join](assets/left-join.png)
+![Right join](assets/right-join.png)
+
+## Course 5 - Assets, Threats, and Vulnerabilities *(In Progress)*
+
+### Module 1 - Introduction to Asset Security
 - 
