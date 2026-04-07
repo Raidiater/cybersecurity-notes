@@ -11,6 +11,8 @@
 - Introduced security frameworks like NIST CSF and their role in managing organizational risk
 - Emphasized that security is everyone's responsibility, not just the IT team
 
+![Course 1 Certification](certificates/course-one-cert.png)
+
 ## ✅ Course 2 - Play It Safe: Manage Security Risks 
 ### Key Concepts
 - Covered the NIST Cybersecurity Framework (CSF) five core functions: Identify, Protect, Detect, Respond, Recover
@@ -22,6 +24,8 @@
 - Discussed the difference between threats, vulnerabilities, and risks and how they relate to each other
 - Introduced basic incident response concepts including how analysts triage and prioritize security events
 
+![Course 2 Certification](certificates/course-two-cert.png)
+
 ## ✅ Course 3 - Connect and Protect: Networks and Security 
 ### Key Concepts
 - Covered how networks work including LAN, WAN, and the difference between them
@@ -32,6 +36,8 @@
 - Covered common network attacks including DDoS, packet sniffing, and man-in-the-middle attacks
 - Discussed VPNs and how they encrypt traffic to protect data in transit
 - Introduced the concept of network hardening including closing unnecessary ports and keeping systems patched
+
+![Course 3 Certification](certificates/course-three-cert.png)
 
 ## ✅ Course 4 - Tools of the Trade: Linux and SQL 
 ### Key Concepts
@@ -125,6 +131,8 @@ are foundational commands for writing bash scripts later on.
 ![Inner join](assets/inner-join.png)
 ![Left join](assets/left-join.png)
 ![Right join](assets/right-join.png)
+
+![Course 4 certification](certificates/course-four-cert.png)
 
 ## Course 5 - Assets, Threats, and Vulnerabilities *(In Progress)*
 
