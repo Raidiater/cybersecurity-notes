@@ -134,7 +134,35 @@ are foundational commands for writing bash scripts later on.
 
 ![Course 4 certification](certificates/course-four-cert.png)
 
-## Course 5 - Assets, Threats, and Vulnerabilities *(In Progress)*
+## 🔄 Course 5 - Assets, Threats and Vulnerabilities *(In Progress)*
 
-### Module 1 - Introduction to Asset Security
-- 
+### Module 1 - Asset Security
+
+- This module covered asset management and why organizations need to identify 
+and classify what they own before they can protect it. Assets can be physical 
+(hardware, facilities) or digital (data, software).
+
+**Asset Classification** labels assets by sensitivity:
+- Restricted — Need-to-know only
+- Confidential — Limited to specific users
+- Internal-only — Users on-premises only
+- Public — Anyone can access
+
+**Data States** define where data exists at any given moment:
+- Data in Use — actively being accessed or processed
+- Data in Transit — moving across a network
+- Data at Rest — stored and not currently being accessed
+
+**Risk** is calculated by Likelihood x Severity to produce a priority score. 
+A risk register is used to document and prioritize these risks.
+
+**NIST CSF Core Functions:** Identify, Protect, Detect, Respond, Recover.
+NIST Tiers measure cybersecurity maturity from Tier 1 (informal) to Tier 4 
+(fully adaptive). Profiles represent the gap between current and target 
+security posture.
+
+**Activities:**
+- Home Asset Inventory — classified home network devices by owner, access 
+frequency, location, and sensitivity level to understand attack surface
+- Risk Register — scored risks to a bank's funds asset by likelihood and 
+severity using a risk matrix to determine priority
