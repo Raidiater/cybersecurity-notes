@@ -9,6 +9,9 @@ Protecting assets is the core goal of cybersecurity.
 The pathway an attacker uses to gain unauthorized access to a system.
 Examples: phishing emails, unpatched software, weak passwords.
 
+### Attack Surface
+The total number of entry points a threat actor could exploit to access a system. Reducing the attack surface is a core goal of security hardening.
+
 ### Authentication
 The process of verifying the identity of a user or system.
 Examples: passwords, multi-factor authentication (MFA).
@@ -84,6 +87,9 @@ Requires a key to decrypt back to readable form.
 ### Endpoint
 Any device that connects to a network such as laptops, phones, and servers.
 Endpoints are common targets for attackers.
+
+### Exposure
+A mistake that can be exploited by a threat.
 
 ## F
 ### Firewall
@@ -249,6 +255,10 @@ Types: nation-state, cybercriminal, insider, hacktivist.
 ### Vulnerability
 A weakness in a system that can be exploited by a threat actor.
 Examples: unpatched software, weak passwords, misconfigured systems.
+
+### Vulnerability Assessment
+The process of identifying, analyzing, and prioritizing vulnerabilities 
+in systems before they can be exploited by threat actors.
 
 ### VPN (Virtual Private Network)
 Encrypts internet traffic and masks a user's IP address.

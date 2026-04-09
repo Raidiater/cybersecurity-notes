@@ -253,8 +253,57 @@ character changes, the hash value changes completely. Common algorithm: SHA-256.
 ![Using openssl to decrypt files](assets/decrypted-file-found.png)
 
 **Activites**
-- Reviewed a data leak incident where a sales representative accidentally shared 
-a link to an internal folder with a business partner who then posted it publicly 
-on social media. Applied NIST SP 800-53 AC-6 guidance on least privilege and 
-recommended restricting access to sensitive resources based on user role and 
-regularly auditing user privileges to prevent similar exposure.
+- Reviewed a data leak incident where a sales representative accidentally shared a link to an internal folder with a business partner who then posted it publicly on social media. Applied NIST SP 800-53 AC-6 guidance on least privilege and recommended restricting access to sensitive resources based on user role and regularly auditing user privileges to prevent similar exposure.
+
+### Module 3 - Vulnerability Management and Threat Actors
+
+This module focused on understanding vulnerabilities, how threat actors exploit them, and how security teams defend against attacks through vulnerability management and an attacker mindset.
+
+**Attack Surface** — the total number of entry points that a threat actor could potentially exploit to gain access to a system or network. Can be physical (USB ports, devices) or digital (open ports, web applications).
+
+**Vulnerability Management** — the ongoing process of identifying, assessing, and remediating vulnerabilities in systems before they can be exploited. The four step process: Identify → Analyze → Remediate → Evaluate.
+
+**Defense in Depth** — a layered security strategy where multiple controls are stacked so that if one layer fails, others remain in place to protect the asset. No single control is relied upon alone. The layers consist of the perimeter layer, network layer, endpoint layer, application layer, and data layer.
+
+**OWASP Top 10** — a widely referenced list of the most critical web application vulnerabilities that security teams actively monitor for. Examples include broken access control, injection, insecure design, vulnerable and outdated components, identification and authentication failures, security logging and monitoring failures, and security misconfiguration. 
+
+**Types of Threat Actors:**
+- Nation-state — government sponsored, highly sophisticated and well funded
+- Cybercriminal — financially motivated attackers
+- Hacktivist — ideologically motivated, use attacks to make a statement
+- Insider Threat — employees or contractors who misuse their access
+- Script Kiddie — low skill attackers using existing tools without deep knowledge
+
+**Types of Hackers:**
+- White Hat — ethical hackers who test systems with permission
+- Black Hat — malicious hackers who attack without authorization
+- Gray Hat — operate between ethical and unethical, may hack without permission but without malicious intent
+
+**Attack Vectors** — the specific pathways threat actors use to penetrate 
+defenses. Examples include phishing emails, removable media like USB drives, 
+unpatched software, and weak credentials.
+
+**Attacker Mindset** — security analysts must think like attackers to anticipate how systems could be exploited. This means identifying access points, understanding what data is valuable, and predicting how that data could be used maliciously. An attacker's mindset could look like this, identify a target, determine how the target can be accessed, evaluate attack vectors that can be exploited, and find the tools and methods of attack. 
+
+**Defending Attack Vectors**
+Some ways to defend could be to educate users, applying the principle of least privilege, using the right security controls and tools, and building a diverse security team. 
+
+**Common Brute Forcing Tools**
+- Aircrack-ng
+- Hashcat
+- John the Ripper
+- Ophcrack
+- THC Hydra
+
+**Prevention Against Brute Force Attacks**
+- Hashing and salting
+- MFA (Multi Factor Authentication)
+- CAPTCHA
+- Password policies
+
+**Activity — Parking Lot USB Exercise**
+Analyzed a scenario where a hospital employee named Jorge found a USB drive in a parking lot and plugged it in. The drive contained personal and work files including PII of coworkers and hospital operational data. Identified how an attacker could use this information to craft targeted phishing emails impersonating coworkers or relatives. Recommended managerial controls like employee awareness training, operational controls like routine antivirus scans, and technical controls like disabling AutoPlay on company computers to prevent automatic execution of malicious code.
+
+![Exemplar review](assets/Exemplar-review-usb.png)
+
+### Module 4 - Threats to Asset Security 
