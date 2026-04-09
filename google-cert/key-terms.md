@@ -16,6 +16,13 @@ Examples: passwords, multi-factor authentication (MFA).
 ### Asset management
 The process of tracking assets and the risks that can affect them
 
+### Asymmetric Encryption 
+The use of a public and private key pair for encryption and decryptiom of data.
+
+### API Token
+A unique identifier used to authenticate access to an application or service.
+Common alternative to username and password for programmatic access.
+
 ## B
 ### Botnet
 A network of compromised computers controlled by an attacker.
@@ -50,6 +57,9 @@ Command used to change file permissions in Linux.
 Controls read, write, and execute access for owner, group, and others.
 Core skill for SOC analysts managing system access controls.
 
+### Cipher
+An algorithim that encrypts information.
+
 ## D
 ### Data Breach
 An incident where unauthorized individuals gain access to sensitive or confidential data.
@@ -62,6 +72,9 @@ Carried out using botnets.
 ### Defense in Depth
 A layered security approach using multiple controls to protect assets.
 If one layer fails, others remain in place.
+
+### Digital certificate
+A file that verifies the identity of a public key holder.
 
 ## E
 ### Encryption
@@ -84,6 +97,15 @@ Examples: NIST CSF, ISO 27001.
 ### Foreign Key
 a column in a table that is a primary key in another table
 
+## H
+### Hashing
+A one-way function that converts data into a fixed length hash value.
+Used to verify file integrity — any change to the file produces a different hash.
+Common algorithm: SHA-256.
+
+### Hash function
+An algorithim that produces a code that can't be dectpyted
+
 ## I
 ### IDS (Intrusion Detection System)
 Monitors network traffic and alerts on suspicious activity.
@@ -103,6 +125,9 @@ Enforced through hashing and access controls.
 
 ### Internal-only
 Describes assets that are available to employees and business partners.
+
+### Information privacy
+The protection of unathurized access and distribution of data
 
 ## L
 ### Log
@@ -153,6 +178,10 @@ Is the lowest level of classification. These assets have no negative consequence
 ### Policy
 A set of rules that reduces risk and protects information
 
+### Public Key Infrastructure (PKI)
+A system that manages digital certificates and encryption keys.
+Uses asymmetric encryption to verify identities and secure communications online.
+
 ## Q
 ### Query
 A request for data from a database table or a combination of tables
@@ -191,6 +220,17 @@ Mitigated by input validation and parameterized queries.
 ### sudo 
 Allows a permitted user to run commands as a superuser or another user.
 Used when administrative privileges are required for system changes.
+
+### Symmetric Encryption
+The use of a single secret key to exhange information.
+
+### Single sign-on (SSO)
+A technology that combines several different logins into one.
+
+### Session Hijacking
+An attack where a threat actor steals a valid session cookie to impersonate 
+a legitimate user without needing their credentials.
+SOC analysts monitor for unusual session activity to detect this.
 
 ## T
 ### TCP/IP
