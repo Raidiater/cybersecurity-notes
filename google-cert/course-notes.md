@@ -159,7 +159,7 @@ are foundational commands for writing bash scripts later on.
 
 ![Course 4 certification](certificates/course-four-cert.png)
 
-## 🔄 Course 5 - Assets, Threats and Vulnerabilities *(In Progress)*
+## ✅ Course 5 - Assets, Threats and Vulnerabilities 
 
 ### Module 1 - Asset Security
 
@@ -307,3 +307,93 @@ Analyzed a scenario where a hospital employee named Jorge found a USB drive in a
 ![Exemplar review](assets/Exemplar-review-usb.png)
 
 ### Module 4 - Threats to Asset Security 
+- ### Module 4 - Threats: Social Engineering, Malware and Web Exploits
+
+This module covered the main threat categories that SOC analysts encounter usually, social engineering attacks, malware, and web-based exploits — along with threat modeling frameworks used to proactively identify and address risks.
+
+**Stages of Social Engineering:**
+- Prepare — attacker gathers information about the target
+- Establish Trust — attacker builds rapport or impersonates a trusted entity
+- Persuasion Tactics — attacker manipulates the target into taking an action
+- Disconnect — attacker cuts contact after achieving their goal to avoid detection
+
+**Preventing Social Engineering:**
+- Implementing managerial controls like security awareness training and policies
+- Staying informed of current social engineering trends and tactics
+- Sharing knowledge with others so the whole organization stays alert
+
+**Common Social Engineering Attacks:**
+- Baiting — luring victims using something enticing like a free USB drive or download
+- Phishing — fraudulent emails designed to trick users into revealing credentials or clicking malicious links
+- Spear Phishing — highly targeted phishing aimed at a specific individual using personal details
+- Whaling — spear phishing specifically targeting high level executives
+- Smishing — phishing carried out via SMS text messages
+- Vishing — phishing carried out via voice calls
+- Quid Pro Quo — offering a service in exchange for information, e.g. fake IT support
+- Tailgating — physically following an authorized person into a restricted area
+- Watering Hole — compromising a website frequently visited by the target group
+
+**Types of Malware:**
+- Virus — malicious code that attaches to legitimate programs and spreads when executed
+- Worm — self-replicating malware that spreads across networks without user action
+- Trojan — malware disguised as legitimate software to trick users into installing it
+- Ransomware — encrypts victim's files and demands payment for the decryption key
+- Spyware — secretly monitors and collects user activity and data without consent
+- Adware — displays unwanted ads, sometimes bundled with spyware
+- Scareware — uses fake warnings to frighten users into installing malicious software
+- Fileless Malware — operates in memory without writing files to disk, harder to detect
+- Rootkit — provides attackers with persistent privileged access while hiding its presence
+- Botnet — a network of infected devices controlled remotely by an attacker
+- Cryptojacking — secretly uses a victim's computing resources to mine cryptocurrency
+
+**Signs of Cryptojacking:**
+- Noticeable system slowdown
+- Increased CPU usage with no clear cause
+- Sudden system crashes
+- Fast draining battery on mobile devices
+- Unusually high electricity costs
+- Slow browser performance from web-based cryptojacking scripts
+
+**Web-Based Exploits:**
+
+Injection Attacks — inserting malicious code into a vulnerable application.
+
+Cross-Site Scripting (XSS) — injecting malicious scripts into trusted websites:
+- Reflected XSS — malicious script is sent in a request and immediately reflected back to the user
+- Stored XSS — malicious script is permanently stored on the server and executes for every visitor
+- DOM-based XSS — exploit happens entirely in the browser by manipulating the page's DOM
+
+SQL Injection — inserting malicious SQL code into a query to manipulate a database.
+Preventions:
+- Prepared Statements — pre-compiles SQL queries so user input cannot alter the query structure
+- Input Sanitization — removes or escapes special characters from user input
+- Input Validation — ensures user input meets expected format before processing
+
+**Threat Modeling** — a structured process for identifying and addressing 
+security risks before they are exploited. Steps:
+1. Define the scope
+2. Identify threats
+3. Characterize the system
+4. Analyze threats
+5. Mitigate threats
+6. Evaluate findings
+
+**Attack Tree** — a diagram that maps out the different ways an attacker 
+could achieve a goal, branching from the main objective down to specific 
+attack methods.
+
+**PASTA Threat Modeling** (Process for Attack Simulation and Threat Analysis):
+1. Define business objectives
+2. Define technical scope
+3. Decompose the application
+4. Analyze threats
+5. Detect vulnerabilities
+6. Enumerate attacks
+7. Analyze risk and impact
+
+**Activity — Phishing Email Analysis**
+Reviewed a suspicious email and identified indicators that confirmed it was a phishing attempt. Practiced spotting common red flags such as mismatched sender domains, urgent language designed to pressure the recipient, suspicious links that don't match the displayed text, and requests for sensitive information that legitimate organizations would never ask for via email.
+
+![Course 5 Certificate](certificates/course-five-cert.png)
+
+## 🔄 Course 6 - 
