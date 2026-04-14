@@ -186,6 +186,8 @@ NIST Tiers measure cybersecurity maturity from Tier 1 (informal) to Tier 4
 (fully adaptive). Profiles represent the gap between current and target 
 security posture.
 
+---
+
 **Activities:**
 - Home Asset Inventory — classified home network devices by owner, access 
 frequency, location, and sensitivity level to understand attack surface
@@ -252,6 +254,8 @@ character changes, the hash value changes completely. Common algorithm: SHA-256.
 ![Using the tr command to understand text file](assets/decreptying-text-tr.png)
 ![Using openssl to decrypt files](assets/decrypted-file-found.png)
 
+---
+
 **Activites**
 - Reviewed a data leak incident where a sales representative accidentally shared a link to an internal folder with a business partner who then posted it publicly on social media. Applied NIST SP 800-53 AC-6 guidance on least privilege and recommended restricting access to sensitive resources based on user role and regularly auditing user privileges to prevent similar exposure.
 
@@ -300,6 +304,8 @@ Some ways to defend could be to educate users, applying the principle of least p
 - MFA (Multi Factor Authentication)
 - CAPTCHA
 - Password policies
+
+---
 
 **Activity — Parking Lot USB Exercise**
 Analyzed a scenario where a hospital employee named Jorge found a USB drive in a parking lot and plugged it in. The drive contained personal and work files including PII of coworkers and hospital operational data. Identified how an attacker could use this information to craft targeted phishing emails impersonating coworkers or relatives. Recommended managerial controls like employee awareness training, operational controls like routine antivirus scans, and technical controls like disabling AutoPlay on company computers to prevent automatic execution of malicious code.
@@ -391,9 +397,142 @@ attack methods.
 6. Enumerate attacks
 7. Analyze risk and impact
 
+---
+
 **Activity — Phishing Email Analysis**
 Reviewed a suspicious email and identified indicators that confirmed it was a phishing attempt. Practiced spotting common red flags such as mismatched sender domains, urgent language designed to pressure the recipient, suspicious links that don't match the displayed text, and requests for sensitive information that legitimate organizations would never ask for via email.
 
 ![Course 5 Certificate](certificates/course-five-cert.png)
 
-## 🔄 Course 6 - 
+## 🔄 Course 6 - Detection and Response *(In Progress)*
+
+### Module 1 - Introduction to detection and incidient response
+- This module introduced the incident response process and the tools and 
+documentation security teams use to manage security events effectively.
+Much of this built on concepts covered in earlier courses.
+
+**The 5 W's of an Incident:**
+- Who triggered the alert
+- What happened
+- Where the incident occurred
+- When the incident was detected
+- Why the incident occurred
+
+**Tool Types:**
+- Detection and Management Tools — identify and monitor threats, examples 
+include SIEM and EDR platforms
+- Documentation Tools — record and track incident details, examples include 
+ticketing systems and incident journals
+- Investigative Tools — analyze evidence and dig deeper into incidents, 
+examples include packet analyzers and log analysis tools
+
+**Types of Documentation:**
+- Playbook — step by step guide for responding to specific incident types
+- Incident Handler's Journal — a running log an analyst keeps during an 
+incident documenting actions taken and findings
+- Policies — organizational rules that govern how security incidents are handled
+- Plans — formal documents outlining how the organization prepares for incidents
+- Final Reports — post-incident summaries documenting what happened, 
+the impact, and lessons learned
+
+**SIEM Process:**
+- Collect and Aggregate Data — gathers logs from across the network 
+into one centralized location
+- Normalize Data — converts logs from different sources into a 
+consistent format so they can be compared and analyzed
+- Analyze Data — applies rules and correlation logic to identify 
+suspicious patterns and generate alerts for analysts to investigate
+
+---
+
+**Activity — Playbook Incident Documentation**
+Used a security playbook to document a simulated incident, following 
+structured steps to record what happened, who was involved, and what 
+actions were taken in response. This mirrors the real workflow a Tier 1 
+SOC analyst follows when triaging and responding to alerts.
+
+### Module 2 - Network monitoring and analysis
+- This module introduced network traffic analysis and gave hands-on experience 
+with two of the most important tools a SOC analyst uses — Wireshark for 
+GUI-based packet analysis and tcpdump for command line packet capture in Linux.
+
+**Key Definitions:**
+- Network Traffic — the data transmitted across a network between devices
+- Network Data — the actual content and metadata captured in network packets
+- Indicators of Compromise (IoC) — evidence that suggests a system or network 
+may have been breached, such as unusual traffic patterns or unexpected 
+connections to external IPs
+- Data Exfiltration — the unauthorized transfer of data from a system to an 
+external destination, often a goal of attackers after gaining access
+
+**Components of a Packet:**
+A packet consists of a header, payload, and footer.
+The header contains metadata about the packet while the payload is the 
+actual data being transmitted.
+
+**IPv4 Header Fields:**
+- Source and destination IP addresses
+- Protocol type (TCP, UDP, ICMP)
+- Time to Live (TTL) — limits how long a packet travels before being discarded
+- Version, length, and checksum fields
+
+**IPv6 Header Fields:**
+Similar to IPv4 but with a larger address space and simplified header 
+structure. Removes checksum field and adds flow label for better routing.
+
+**Wireshark Packet Property Columns:**
+- No. — index number of the packet in the capture file
+- Time — timestamp of when the packet was captured
+- Source — the source IP address
+- Destination — the destination IP address
+- Protocol — the protocol contained in the packet
+- Length — total length of the packet
+- Info — summary of the payload data as interpreted by Wireshark
+
+![Wireshark packet property columns](assets/property-column-packet.png)
+
+**Wireshark Filter Operators:**
+- Comparison — filters by specific values, e.g. ip.addr == 192.168.1.1
+- Contains — searches for a string within a field, e.g. http contains "GET"
+- Matches — uses regex to match patterns within packet data
+
+**tcpdump Commands:**
+- sudo tcpdump -i eth0 — capture live traffic on a specific interface
+- sudo tcpdump -i eth0 -w capture.pcap — save capture to a file
+- sudo tcpdump -r capture.pcap — read from a saved capture file
+- sudo tcpdump -i eth0 -c 5 — capture only 5 packets
+- sudo tcpdump port 80 — filter traffic by port
+- sudo tcpdump host 192.168.1.1 — filter traffic by IP address
+
+---
+
+**Lab 1 — Wireshark Packet Analysis (Windows VM)**
+In this lab we opened a packet capture file in Wireshark and analyzed network 
+traffic from a user browsing a website. We explored the Wireshark GUI and 
+examined individual packets in detail, viewing the different protocol layers 
+inside each packet. We applied filters to isolate specific traffic including 
+UDP DNS traffic to examine how domain lookups work and TCP traffic to search 
+for specific payload text. This hands-on experience directly mirrors how SOC 
+analysts filter and investigate suspicious network activity during an incident.
+
+![Wireshark applying a filter](assets/applying-fillter-wireshark.png)
+![Finding the packet arrival time](assets/packet-arrival.png)
+![Seeing the destination source](assets/destination-source.png)
+![Seeing the IP source destination](assets/ip-source-destination.png)
+![Finding the same source IP](assets/source-ip-command.png)
+![Finding packets being sent to the IP](assets/packets-sent-to-ip.png)
+![Filtering ethernet mac traffic](assets/eth-mac-traffic-filter.png)
+![IP addresses associated with the website](assets/addresses-associated-google.png)
+
+**Lab 2 — tcpdump Packet Capture (Linux VM)**
+In this lab we used tcpdump in a Linux terminal to capture live network 
+traffic, identify active network interfaces, and save captured packets to 
+a pcap file. We then filtered the saved capture to focus on specific types 
+of traffic. This is a core skill for SOC analysts working in Linux environments 
+where GUI tools may not be available.
+
+![Identifying network interfaces in Linux](assets/identify-network-interfaces-linux.png)
+![Capturing 5 packets](assets/captured-5-packets.png)
+![tcpdump with command explanations](assets/tcpdump-command-extra-options.png)
+![Capturing the packet data](assets/packet-data-captured.png)
+
