@@ -536,3 +536,77 @@ where GUI tools may not be available.
 ![tcpdump with command explanations](assets/tcpdump-command-extra-options.png)
 ![Capturing the packet data](assets/packet-data-captured.png)
 
+### Module 3 - Incident Investigation and Triage
+
+This module covered how SOC analysts detect threats, investigate incidents, 
+and maintain proper documentation throughout the process. These are core 
+daily responsibilities for a Tier 1 SOC analyst.
+
+**Methods of Detection:**
+
+- Threat Hunting — a proactive approach where analysts actively search 
+through networks and systems for signs of malicious activity that automated 
+tools may have missed. Unlike reactive monitoring, threat hunting assumes 
+a breach may already exist and works to find it.
+
+- Threat Intelligence — the collection and analysis of information about 
+current and emerging threats. Helps analysts understand attacker tactics, 
+techniques, and procedures (TTPs) to better detect and respond to attacks.
+Sources include open source intelligence (OSINT), commercial feeds, and 
+government advisories like CISA alerts.
+
+- Cyber Deception — a defensive technique that uses decoys like honeypots 
+and honeynets to lure attackers away from real assets. When an attacker 
+interacts with a decoy, it generates an alert and reveals their tactics 
+without them knowing they've been detected.
+
+**Common IoCs in CI/CD Pipelines:**
+CI/CD (Continuous Integration/Continuous Deployment) pipelines are 
+increasingly targeted since they have privileged access to production systems.
+Common indicators of compromise include:
+- Unauthorized code changes — unexpected modifications to source code 
+or configuration files
+- Suspicious deployment patterns — deployments happening at unusual times 
+or to unexpected environments
+- Compromised dependencies — malicious packages introduced through 
+third party libraries
+- Unusual pipeline execution — jobs running unexpectedly or with 
+elevated permissions not previously seen
+- Secrets exposure attempts — attackers trying to extract API keys, 
+passwords, or tokens stored in pipeline environment variables
+
+**Chain of Custody:**
+The documented and unbroken record of who collected, handled, transferred, 
+and analyzed evidence during a security investigation. Maintaining chain of 
+custody is critical because it ensures evidence is admissible and trustworthy 
+if the incident leads to legal proceedings.
+
+**Broken Chain of Custody:**
+Occurs when evidence handling cannot be fully accounted for, meaning 
+the integrity of the evidence can no longer be guaranteed. This can 
+compromise investigations and make evidence inadmissible in court.
+
+**Triage Process:**
+The structured process SOC analysts use to prioritize and respond to 
+security alerts efficiently:
+- Receive and Assess — analyst receives the alert and performs an 
+initial review to determine if it is a true or false positive
+- Assign Priority — based on the potential impact and urgency, the 
+alert is assigned a priority level to determine how quickly it needs 
+to be addressed
+- Collect and Analyze — gather relevant data from logs, network traffic, 
+and affected systems to investigate the alert and determine the full 
+scope of the incident
+
+**Additional Concepts:**
+- TTPs (Tactics, Techniques, and Procedures) — the specific methods 
+and patterns used by threat actors to carry out attacks. Understanding 
+TTPs helps analysts anticipate attacker behavior and improve detection rules.
+- False Positive — an alert that appears to indicate a threat but is 
+actually benign activity. A significant portion of a Tier 1 SOC analyst's 
+job is distinguishing false positives from real threats.
+- True Positive — a confirmed alert where malicious activity has actually 
+occurred and requires a response.
+- Escalation — when a Tier 1 analyst determines an incident is beyond 
+their scope they escalate it to Tier 2 or Tier 3 analysts for deeper 
+investigation.

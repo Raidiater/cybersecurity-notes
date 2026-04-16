@@ -69,6 +69,11 @@ An injection attack that inserts code into a vulnerable website or web applicati
 ### Cryptojacking
 A form of malware that installs software to illegally mine cryptocurrencies.
 
+### Chain of Custody
+The documented record of everyone who handled evidence during an 
+investigation. Critical for maintaining evidence integrity and 
+admissibility in legal proceedings.
+
 ## D
 ### Data Breach
 An incident where unauthorized individuals gain access to sensitive or confidential data.
@@ -114,6 +119,10 @@ Examples: NIST CSF, ISO 27001.
 ### Foreign Key
 a column in a table that is a primary key in another table
 
+### False Positive
+An alert that appears malicious but turns out to be benign activity. 
+Distinguishing false positives from real threats is a core SOC analyst skill.
+
 ## H
 ### Hashing
 A one-way function that converts data into a fixed length hash value.
@@ -122,6 +131,10 @@ Common algorithm: SHA-256.
 
 ### Hash function
 An algorithim that produces a code that can't be dectpyted
+
+### Honeypot
+A decoy system designed to lure attackers away from real assets. 
+When interacted with, it alerts defenders and reveals attacker tactics.
 
 ## I
 ### IDS (Intrusion Detection System)
@@ -294,10 +307,33 @@ Examples: hackers, malware, insider threats.
 An individual or group responsible for carrying out a cyberattack.
 Types: nation-state, cybercriminal, insider, hacktivist.
 
+### Threat Hunting
+A proactive security practice where analysts actively search for 
+threats that automated tools may have missed. Assumes a breach may 
+already exist rather than waiting for alerts.
+
+### Threat Intelligence
+Information about current and emerging threats used to improve 
+detection and response. Sources include OSINT, commercial feeds, 
+and government advisories like CISA.
+
 ### tcpdump
 A command line packet capture tool used in Linux environments.
 Captures live network traffic and saves it to pcap files for analysis.
 Essential for analysts working without GUI tools.
+
+### Triage
+The process of receiving, prioritizing, and analyzing security alerts. 
+Core daily responsibility of a Tier 1 SOC analyst.
+
+### TTPs (Tactics, Techniques, and Procedures)
+The specific methods threat actors use to carry out attacks. 
+Understanding TTPs helps analysts build better detection rules 
+and anticipate attacker behavior.
+
+### True Positive
+A confirmed alert where malicious activity has actually occurred 
+and requires investigation and response.
 
 ## V
 ### Vulnerability
