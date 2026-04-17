@@ -1,101 +1,73 @@
 # Google Cybersecurity Certificate - Course Notes
 
 ## ✅ Course 1 - Foundations of Cybersecurity
-### Key Concepts
-- Cybersecurity is the practice of protecting networks, systems, and data from unauthorized access or attacks
-- Introduced the eight CISSP security domains covering areas like asset security, identity management, and software development security
-- Covered the history of cybersecurity including early viruses, the Morris Worm, and how attacks evolved over time
-- Introduced the CIA Triad (Confidentiality, Integrity, Availability) as the core framework for security decisions
-- Discussed types of threat actors including nation-states, cybercriminals, hacktivists, and insider threats
-- Covered common attack types including phishing, malware, and social engineering
-- Introduced security frameworks like NIST CSF and their role in managing organizational risk
-- Emphasized that security is everyone's responsibility, not just the IT team
+
+**What I learned**
+- Learned the core purpose of cybersecurity: protecting systems, networks, and data from unauthorized access and attacks.
+- Built familiarity with the CIA Triad: confidentiality, integrity, and availability.
+- Reviewed major threat actors such as cybercriminals, nation-states, insiders, and hacktivists.
+- Introduced to major security frameworks, including NIST CSF, and why organizations use them to manage risk.
+- Learned how social engineering, phishing, and malware fit into the broader threat landscape.
+
+**Why this matters**
+This course built the base for understanding how organizations think about security, risk, and attacker behavior.
 
 ![Course 1 Certification](certificates/course-one-cert.png)
 
 ## ✅ Course 2 - Play It Safe: Manage Security Risks 
-### Key Concepts
-- Covered the NIST Cybersecurity Framework (CSF) five core functions: Identify, Protect, Detect, Respond, Recover
-- Introduced risk management concepts including how to identify, assess, and prioritize risks
-- Discussed security audits and their role in ensuring compliance with policies and regulations
-- Covered common compliance frameworks including HIPAA, GDPR, and PCI-DSS and why organizations follow them
-- Introduced SIEM tools as a way to collect and analyze security logs to detect threats
-- Covered security playbooks and how SOC analysts use them to respond to incidents consistently
-- Discussed the difference between threats, vulnerabilities, and risks and how they relate to each other
-- Introduced basic incident response concepts including how analysts triage and prioritize security events
+
+**What I learned**
+- Studied the NIST CSF five functions: Identify, Protect, Detect, Respond, and Recover.
+- Learned basic risk management concepts, including how to identify, assess, and prioritize risk.
+- Reviewed the role of audits, compliance, and security policies in organizations.
+- Learned how SIEM tools help collect and analyze logs for threat detection.
+- Practiced understanding how SOC analysts use playbooks and incident response workflows.
+
+**Why this matters**
+This course introduced the mindset and structure behind how security teams manage threats and respond to incidents.
 
 ![Course 2 Certification](certificates/course-two-cert.png)
 
 ## ✅ Course 3 - Connect and Protect: Networks and Security 
-### Key Concepts
-- Covered how networks work including LAN, WAN, and the difference between them
-- Introduced the TCP/IP model and how data travels across a network through layers
-- Covered key networking protocols including TCP, UDP, HTTP, HTTPS, DNS, and FTP and what each does
-- Discussed IP addressing including the difference between IPv4 and IPv6
-- Introduced network security tools including firewalls, IDS, IPS, and how they protect network traffic
-- Covered common network attacks including DDoS, packet sniffing, and man-in-the-middle attacks
-- Discussed VPNs and how they encrypt traffic to protect data in transit
-- Introduced the concept of network hardening including closing unnecessary ports and keeping systems patched
+
+**What I learned**
+- Learned how networks function, including LAN, WAN, and how devices communicate across layers.
+- Built a foundation in the TCP/IP model and common protocols such as TCP, UDP, HTTP, HTTPS, DNS, and FTP.
+- Learned basic IP addressing concepts, including IPv4 and IPv6.
+- Explored common security tools like firewalls, IDS, IPS, and VPNs.
+- Reviewed common network attacks such as DDoS, packet sniffing, and man-in-the-middle attacks.
+- Learned why patching and closing unnecessary ports are important for network hardening.
+
+**Why this matters**
+This course gave me the networking foundation needed to understand traffic, threats, and security controls in real environments.
 
 ![Course 3 Certification](certificates/course-three-cert.png)
 
 ## ✅ Course 4 - Tools of the Trade: Linux and SQL 
-### Key Concepts
-- This course we go into learning and getting hands on expierence with the operating system
-- The OS (operating system) we learn in this course is Linux, we learn the basic command lines in the bash shell
 
-### Module 1 - Introduction to operating systems
-- Learned about the different OS, like Windows, Linux, ChromeOS, Android, and IOS
-- Also talked about how the user and computer interact with each other, it starts with the user then the application, then the OS, and then to the hardware. Once it reaches the hardware it goes into reverse order so the user gets that output
-- Talked about GUI (Graphical User Interface) and CLI (Command Line Interface)
+Key Skills: Linux administration, file management, permissions, user management, SQL querying
 
-### Module 2 - The Linux operating system
-- This module covered the architecture of Linux and how each layer interacts 
-with the other. The structure goes from the user at the top, down through 
-applications, the shell, the kernel, and finally the hardware. We also 
-covered the Filesystem Hierarchy Standard (FHS) which defines how directories 
-are organized in Linux.
-
-**Lab 1 - Installing and Deleting**
-
-- In our first hands-on lab we worked with the apt package manager to install 
-and remove applications. We verified apt was installed, used it to install 
-Suricata (a network security monitoring tool), confirmed the installation 
-was successful, and then removed it afterwards.
+**Linux Package Management**
+- In this lab I installed Suricata (a network security monitoring tool) using apt package manager, verified successful deployment, then cleanly removed it.
 
 ![Installing Suricata](assets/downloading-suricata.png)
-![Deleting Suricata](assets/removed-suricata.png)
+![Removal Suricata](assets/removed-suricata.png)
 
-**Lab 2 - Basic input commands in Linux**
+What this shows: Ability to deploy and manage security tools in Linux enviornments.
 
-- We then practiced basic input commands in the shell. The echo command prints 
-text back to the terminal, and expr performs mathematical calculations. These 
-are foundational commands for writing bash scripts later on.
-
-![Using the echo command](assets/echo-command.png)
-![Expr command practice](assets/expr-command.png)
-
-### Module 3 - Linux commands in the Bash shell
-
-**Lab 1 - Basic navigagtion**
-
-- In this lab we practiced navigating the Linux file system using core commands. Used pwd to check the current directory, ls to list contents, and cd to move between directories. We also used cat to read file contents and practiced writing absolute paths from the home directory.
+**Linux File System Navigation & Analysis**
+- Navigated directories using pwd, ls, cd, cat. I also used grep with piping (|) to search server logs for "error" patterns. 
 
 ![Doing basic navigation](assets/basic-navigation.png)
 ![Viewing file contents](assets/absolute-path-and-cat.png)
-
-
-**Lab 2 - Filtering in Linux**
-
-- We then covered filtering commands using grep to search for specific patterns inside files like finding the word "error" in server_logs.txt. Also used piping with the | symbol to chain commands together for more specific results.
-
 ![Basic filtering](assets/grep-filter.png)
 ![Filtering with grep and piping](assets/grep-piping.png)
 ![More filtering with grep and piping](assets/more-grep-filtering.png)
 
-**Lab 3 - Creating, removing, moving and editing files and directories**
+What this shows: Log analysis skills critical for SOC analysts investigating incidents. 
 
-- In this lab we created and removed directories using mkdir and rmdir, and moved files between directories using the mv command. We then deleted a file called tempnotes.txt using rm and created a new file called tasks.txt using touch.Finally we edited tasks.txt using the nano text editor and verified the changes were saved using cat.
+**File & Directory Management**
+- This lab I created/removed directories (mkdir/rmdir), moved files (mv), deleted files (rm), created files (touch), and edited files with nano. 
 
 ![Adding and removing directories](assets/mkdir-rmdir.png)
 ![Moving a file](assets/mv-move.png)
@@ -103,417 +75,111 @@ are foundational commands for writing bash scripts later on.
 ![Editing a file](assets/nano-editior.png)
 ![Output of the file](assets/nano-output-cat.png)
 
-**Lab 4 - File permissions and hidden files**
-
-- In the next lab we worked with file permissions to control who has access to what. We used ls -l to view permissions on files inside the permissions directory, and ls -la to also reveal hidden files. After reviewing the permissions we used chmod to modify them, specifically using chmod o-w to remove the write permission from the owner on specific files.
+**File permissions & Access Control**
+- Viewed permissions of files (ls -l/ls -la), modified with chmod o-w to enforce least privilege, and managed hidden files.
 
 ![Showing permissions of the files](assets/showing-permissions.png)
 ![Changing the permissions of the files](assets/changing-permissions.png)
 ![Revealing and changing permissions of hidden files](assets/hidden-file-change.png)
 
-**Lab 5 - User permissions and assigning**
+What this shows: Understanding of access control fundamental to sysadmin/SOC roles. 
 
-- In the next lab of this module we managed users and groups. We created a new user called researcher9 using sudo useradd, then added them to the research_team group using sudo usermod -g. We assigned file ownership of project_r.txt to that user using chown, and added them to a secondary group called sales_team. When deleting the user with userdel ran into an issue since the user wasn't in a primary group, so we used groupdel instead to remove the group.
+**User & Group Management**
+- Practiced creating users (sudo useradd), assigned the user with primary/secondary groups (usermod -g), changed ownership (chown), and handled group deletion issues.
 
 ![Creating, assigning, and removing the user](assets/new-user.png)
 
-### Module 4 - Databases and SQL
+What this shows: Practical Active Directory/Linux admin skills.
 
-**Lab 1 - SQL in Linux**
-
-- In our first lab of this module we start getting some first expierence with using SQL queries. We use SELECT to retrieve the columns and then FROM to retrieve the date from the table. For this instance we are getting records of the login date and login time and then using ORDER BY to have those at the top. 
+**SQL Database Querying**
+- This lab I practiced with SQL by querying login attempts using SELECT, WHERE, ORDER BY, BETWEEN, AND/OR/NOT, and using INNER/LEFT/RIGHT JOINs.
 
 ![Getting log in attempts from database](assets/log-in-attempts.png)
 ![Ordering by the login date](assets/order-by-login-date.png)
 ![Filtering the login date and login time](assets/filtering-login-date-login-time.png)
-
-**Lab 2 - SQL filtering in databases**
-
-- In this next lab we work with the WHERE and LIKE operator for more specific filtering in SQL databases. We use WHERE to pull specific columns from the specific table in SQL and we use the LIKE operator to type in a word with a percentage symbol to find a matching pattern. 
-
 ![Finding a specific word](assets/more-sql-filter.png)
 ![Finding the specific pattern](assets/like-operator-percen.png)
-
-**Lab 3 - Times and dates in SQL**
-
-- This lab we focused on finding data with dates and times, either using a less then, greater than, or even less than and equal too or greater than and equal too symbols to determine data either after or before those times and and dates. We also used the BETWEEN operator to find data inbetween two times or dates to pull even more specific data from the tables. 
-
 ![Finding data after a specific date](assets/data-after-date.png)
 ![Pulling data between two different times](assets/between-time.png)
-
-**Lab 4 - Finding specific data in SQL**
-
-- Next lab we use the operators AND, OR, and NOT to filter out stuff even more specific data we need to find. Like finding failed login attempts before a specific time and to see if it actually failed and how many attempts where there. Or finding a specific department with a specific office and even excluding a department. 
-
 ![Failed login attempts after 18:00](assets/failed_login_attempts.png)
 ![Finding a specific department within an office](assets/finding-department-and-where-office.png)
 ![Excluding IT](assets/anywhere-but-IT.png)
-
-**Lab 5 - Joins in SQL**
-
-- In this final lab we use 3 forms of joining tables, the INNER JOIN, RIGHT JOIN, and LEFT JOIN, this lab didn't include the FULL OUTER JOIN but it wasn't needed for the scenario. 
-
 ![Inner join](assets/inner-join.png)
 ![Left join](assets/left-join.png)
 ![Right join](assets/right-join.png)
+
+What this shows: Log analysis and investigation skills used in SIEM platforms. 
+
+**Tools Used/Practiced With**
+- Bash shell (CLI navigation, grep, piping)
+- Package management (apt)
+- Text editors (nano)
+- File permissions (chmod, chown)
+- User management (useradd, usermod, groupdel1)
+- SQL (SELECT, WHERE, LIKE, ORDER BY, JOINs)
+- Suricata IDS (installation/testing)
 
 ![Course 4 certification](certificates/course-four-cert.png)
 
 ## ✅ Course 5 - Assets, Threats and Vulnerabilities 
 
-### Module 1 - Asset Security
+Key Skills: Risk assessment, cryptography, threat analysis, vulnerability management
 
-- This module covered asset management and why organizations need to identify 
-and classify what they own before they can protect it. Assets can be physical 
-(hardware, facilities) or digital (data, software).
+**Asset Management & Risk Analysis**
+- Classified assets by sensitivity (Restricted/Internal/Public) and data states (Use/Transit/Rest).
+- Built risk register scoring bank's funds using Likelihood x Severity matrix.
+- Condicted home asset inventory to map personal attack surface.
 
-**Asset Classification** labels assets by sensitivity:
-- Restricted — Need-to-know only
-- Confidential — Limited to specific users
-- Internal-only — Users on-premises only
-- Public — Anyone can access
-
-**Data States** define where data exists at any given moment:
-- Data in Use — actively being accessed or processed
-- Data in Transit — moving across a network
-- Data at Rest — stored and not currently being accessed
-
-**Risk** is calculated by Likelihood x Severity to produce a priority score. 
-A risk register is used to document and prioritize these risks.
-
-**NIST CSF Core Functions:** Identify, Protect, Detect, Respond, Recover.
-NIST Tiers measure cybersecurity maturity from Tier 1 (informal) to Tier 4 
-(fully adaptive). Profiles represent the gap between current and target 
-security posture.
-
----
-
-**Activities:**
-- Home Asset Inventory — classified home network devices by owner, access 
-frequency, location, and sensitivity level to understand attack surface
-- Risk Register — scored risks to a bank's funds asset by likelihood and 
-severity using a risk matrix to determine priority
-
-### Module 2 - Protect organizational assets
-
-This module covered how organizations protect data privacy and security 
-through controls, encryption, and authentication. 
-
-**Types of Security Controls:**
-- Technical — technology-based controls like encryption and firewalls
-- Operational — day-to-day procedures like access reviews and monitoring
-- Managerial — policies and governance that guide security decisions
-
-**Data Lifecycle:** Collect → Store → Use → Archive → Destroy.
-Each stage requires appropriate controls to protect data privacy.
-
-**Key Definitions:**
-- Data Custodian — responsible for the safe handling and storage of data
-- Information Privacy — the right to control how personal data is collected and used
-- Information Security — the practice of protecting data from unauthorized access
-- Cryptography — the process of transforming readable data into an unreadable format to protect it
-- Cipher — an algorithm used to encrypt and decrypt data
-- Cryptographic Key — a value used by a cipher to encrypt or decrypt data
-
-**Encryption Types:**
-- Symmetric Encryption — uses the same key to encrypt and decrypt data, faster but less secure for sharing
-- Asymmetric Encryption — uses a public key to encrypt and a private key to decrypt, more secure for sharing
-- Public Key Infrastructure (PKI) — a two step process that manages the creation and distribution of digital certificates to verify identities online
-- Digital Certificate — an electronic document that verifies the identity of a person, device, or organization online
-
-**Hashing:**
-Hash functions convert data into a fixed-length code called a hash value or 
-digest that cannot be decrypted. Used to verify file integrity — if even one 
-character changes, the hash value changes completely. Common algorithm: SHA-256.
-
-**Authentication Factors:**
-- Knowledge — something you know (password, PIN)
-- Ownership — something you have (phone, token)
-- Characteristic — something you are (fingerprint, face ID)
-
-**Session Management:**
-- Session — a period of network activity between a user and a server
-- Session ID — a unique token assigned to identify a session
-- Session Cookie — stores the session ID in the browser to maintain the session
-- Session Hijacking — an attack where a threat actor steals a session cookie to impersonate a legitimate user
-
-**Authentication Methods:**
-- Basic Auth — username and password sent with each request, considered weak on its own
-- API Token — a unique identifier used to authenticate access to an application or service
-- MFA (Multi-Factor Authentication) — requires two or more authentication factors, significantly reduces unauthorized access risk
-
-**Lab 1 - Hashing Files in Linux**
-- In this lab we generated hash values for two files using the sha256sum command and manually compared them in the terminal to detect differences. This is similar to how SOC analysts verify file integrity to identify whether a file has been tampered with or replaced by a malicious program.
+**Linux Cryptography Labs**
+SHA-256 File Integrity Verification
+- Generated file hashes with sha256sum, compared to detecting tampering which is a core SOC analyst skill for malware detection. 
 
 ![Hashing files using sha256sum](assets/hashing-sha.png)
 ![Comparing hash](assets/difference-hash.png)
 
-**Lab 2 - Decrypting Files in Linux** 
-- This lab we used Linux commands including tr for character translation and openssl for decryption to decrypt files and reveal hidden messages. This lab gave hands-on experience with how encryption and decryption work at a command line level, reinforcing how analysts handle encrypted data in real environments.
+**File Decryption & Analysis**
+- Used the tr command for text translation and openssl for decryption, revealing hidden messages in encrypted files. 
 
 ![Using the tr command to understand text file](assets/decreptying-text-tr.png)
 ![Using openssl to decrypt files](assets/decrypted-file-found.png)
 
----
+What this shows: Command-line handling of encrypted data during investigations
 
-**Activites**
+**Real-World Threat Scenarios**
 - Reviewed a data leak incident where a sales representative accidentally shared a link to an internal folder with a business partner who then posted it publicly on social media. Applied NIST SP 800-53 AC-6 guidance on least privilege and recommended restricting access to sensitive resources based on user role and regularly auditing user privileges to prevent similar exposure.
 
-### Module 3 - Vulnerability Management and Threat Actors
-
-This module focused on understanding vulnerabilities, how threat actors exploit them, and how security teams defend against attacks through vulnerability management and an attacker mindset.
-
-**Attack Surface** — the total number of entry points that a threat actor could potentially exploit to gain access to a system or network. Can be physical (USB ports, devices) or digital (open ports, web applications).
-
-**Vulnerability Management** — the ongoing process of identifying, assessing, and remediating vulnerabilities in systems before they can be exploited. The four step process: Identify → Analyze → Remediate → Evaluate.
-
-**Defense in Depth** — a layered security strategy where multiple controls are stacked so that if one layer fails, others remain in place to protect the asset. No single control is relied upon alone. The layers consist of the perimeter layer, network layer, endpoint layer, application layer, and data layer.
-
-**OWASP Top 10** — a widely referenced list of the most critical web application vulnerabilities that security teams actively monitor for. Examples include broken access control, injection, insecure design, vulnerable and outdated components, identification and authentication failures, security logging and monitoring failures, and security misconfiguration. 
-
-**Types of Threat Actors:**
-- Nation-state — government sponsored, highly sophisticated and well funded
-- Cybercriminal — financially motivated attackers
-- Hacktivist — ideologically motivated, use attacks to make a statement
-- Insider Threat — employees or contractors who misuse their access
-- Script Kiddie — low skill attackers using existing tools without deep knowledge
-
-**Types of Hackers:**
-- White Hat — ethical hackers who test systems with permission
-- Black Hat — malicious hackers who attack without authorization
-- Gray Hat — operate between ethical and unethical, may hack without permission but without malicious intent
-
-**Attack Vectors** — the specific pathways threat actors use to penetrate 
-defenses. Examples include phishing emails, removable media like USB drives, 
-unpatched software, and weak credentials.
-
-**Attacker Mindset** — security analysts must think like attackers to anticipate how systems could be exploited. This means identifying access points, understanding what data is valuable, and predicting how that data could be used maliciously. An attacker's mindset could look like this, identify a target, determine how the target can be accessed, evaluate attack vectors that can be exploited, and find the tools and methods of attack. 
-
-**Defending Attack Vectors**
-Some ways to defend could be to educate users, applying the principle of least privilege, using the right security controls and tools, and building a diverse security team. 
-
-**Common Brute Forcing Tools**
-- Aircrack-ng
-- Hashcat
-- John the Ripper
-- Ophcrack
-- THC Hydra
-
-**Prevention Against Brute Force Attacks**
-- Hashing and salting
-- MFA (Multi Factor Authentication)
-- CAPTCHA
-- Password policies
-
----
-
-**Activity — Parking Lot USB Exercise**
-Analyzed a scenario where a hospital employee named Jorge found a USB drive in a parking lot and plugged it in. The drive contained personal and work files including PII of coworkers and hospital operational data. Identified how an attacker could use this information to craft targeted phishing emails impersonating coworkers or relatives. Recommended managerial controls like employee awareness training, operational controls like routine antivirus scans, and technical controls like disabling AutoPlay on company computers to prevent automatic execution of malicious code.
+**Parking Lot USB Exercise**
+- Analyzed a scenario where a hospital employee named Jorge found a USB drive in a parking lot and plugged it in. The drive contained personal and work files including PII of coworkers and hospital operational data. Identified how an attacker could use this information to craft targeted phishing emails impersonating coworkers or relatives. Recommended managerial controls like employee awareness training, operational controls like routine antivirus scans, and technical controls like disabling AutoPlay on company computers to prevent automatic execution of malicious code.
 
 ![Exemplar review](assets/Exemplar-review-usb.png)
 
-### Module 4 - Threats to Asset Security 
-- ### Module 4 - Threats: Social Engineering, Malware and Web Exploits
-
-This module covered the main threat categories that SOC analysts encounter usually, social engineering attacks, malware, and web-based exploits — along with threat modeling frameworks used to proactively identify and address risks.
-
-**Stages of Social Engineering:**
-- Prepare — attacker gathers information about the target
-- Establish Trust — attacker builds rapport or impersonates a trusted entity
-- Persuasion Tactics — attacker manipulates the target into taking an action
-- Disconnect — attacker cuts contact after achieving their goal to avoid detection
-
-**Preventing Social Engineering:**
-- Implementing managerial controls like security awareness training and policies
-- Staying informed of current social engineering trends and tactics
-- Sharing knowledge with others so the whole organization stays alert
-
-**Common Social Engineering Attacks:**
-- Baiting — luring victims using something enticing like a free USB drive or download
-- Phishing — fraudulent emails designed to trick users into revealing credentials or clicking malicious links
-- Spear Phishing — highly targeted phishing aimed at a specific individual using personal details
-- Whaling — spear phishing specifically targeting high level executives
-- Smishing — phishing carried out via SMS text messages
-- Vishing — phishing carried out via voice calls
-- Quid Pro Quo — offering a service in exchange for information, e.g. fake IT support
-- Tailgating — physically following an authorized person into a restricted area
-- Watering Hole — compromising a website frequently visited by the target group
-
-**Types of Malware:**
-- Virus — malicious code that attaches to legitimate programs and spreads when executed
-- Worm — self-replicating malware that spreads across networks without user action
-- Trojan — malware disguised as legitimate software to trick users into installing it
-- Ransomware — encrypts victim's files and demands payment for the decryption key
-- Spyware — secretly monitors and collects user activity and data without consent
-- Adware — displays unwanted ads, sometimes bundled with spyware
-- Scareware — uses fake warnings to frighten users into installing malicious software
-- Fileless Malware — operates in memory without writing files to disk, harder to detect
-- Rootkit — provides attackers with persistent privileged access while hiding its presence
-- Botnet — a network of infected devices controlled remotely by an attacker
-- Cryptojacking — secretly uses a victim's computing resources to mine cryptocurrency
-
-**Signs of Cryptojacking:**
-- Noticeable system slowdown
-- Increased CPU usage with no clear cause
-- Sudden system crashes
-- Fast draining battery on mobile devices
-- Unusually high electricity costs
-- Slow browser performance from web-based cryptojacking scripts
-
-**Web-Based Exploits:**
-
-Injection Attacks — inserting malicious code into a vulnerable application.
-
-Cross-Site Scripting (XSS) — injecting malicious scripts into trusted websites:
-- Reflected XSS — malicious script is sent in a request and immediately reflected back to the user
-- Stored XSS — malicious script is permanently stored on the server and executes for every visitor
-- DOM-based XSS — exploit happens entirely in the browser by manipulating the page's DOM
-
-SQL Injection — inserting malicious SQL code into a query to manipulate a database.
-Preventions:
-- Prepared Statements — pre-compiles SQL queries so user input cannot alter the query structure
-- Input Sanitization — removes or escapes special characters from user input
-- Input Validation — ensures user input meets expected format before processing
-
-**Threat Modeling** — a structured process for identifying and addressing 
-security risks before they are exploited. Steps:
-1. Define the scope
-2. Identify threats
-3. Characterize the system
-4. Analyze threats
-5. Mitigate threats
-6. Evaluate findings
-
-**Attack Tree** — a diagram that maps out the different ways an attacker 
-could achieve a goal, branching from the main objective down to specific 
-attack methods.
-
-**PASTA Threat Modeling** (Process for Attack Simulation and Threat Analysis):
-1. Define business objectives
-2. Define technical scope
-3. Decompose the application
-4. Analyze threats
-5. Detect vulnerabilities
-6. Enumerate attacks
-7. Analyze risk and impact
-
----
-
-**Activity — Phishing Email Analysis**
-Reviewed a suspicious email and identified indicators that confirmed it was a phishing attempt. Practiced spotting common red flags such as mismatched sender domains, urgent language designed to pressure the recipient, suspicious links that don't match the displayed text, and requests for sensitive information that legitimate organizations would never ask for via email.
-
-![Course 5 Certificate](certificates/course-five-cert.png)
-
-## 🔄 Course 6 - Detection and Response *(In Progress)*
-
-### Module 1 - Introduction to detection and incidient response
-- This module introduced the incident response process and the tools and 
-documentation security teams use to manage security events effectively.
-Much of this built on concepts covered in earlier courses.
-
-**The 5 W's of an Incident:**
-- Who triggered the alert
-- What happened
-- Where the incident occurred
-- When the incident was detected
-- Why the incident occurred
-
-**Tool Types:**
-- Detection and Management Tools — identify and monitor threats, examples 
-include SIEM and EDR platforms
-- Documentation Tools — record and track incident details, examples include 
-ticketing systems and incident journals
-- Investigative Tools — analyze evidence and dig deeper into incidents, 
-examples include packet analyzers and log analysis tools
-
-**Types of Documentation:**
-- Playbook — step by step guide for responding to specific incident types
-- Incident Handler's Journal — a running log an analyst keeps during an 
-incident documenting actions taken and findings
-- Policies — organizational rules that govern how security incidents are handled
-- Plans — formal documents outlining how the organization prepares for incidents
-- Final Reports — post-incident summaries documenting what happened, 
-the impact, and lessons learned
-
-**SIEM Process:**
-- Collect and Aggregate Data — gathers logs from across the network 
-into one centralized location
-- Normalize Data — converts logs from different sources into a 
-consistent format so they can be compared and analyzed
-- Analyze Data — applies rules and correlation logic to identify 
-suspicious patterns and generate alerts for analysts to investigate
-
----
-
-**Activity — Playbook Incident Documentation**
-Used a security playbook to document a simulated incident, following 
+**Playbook Incident Documentation**
+- Used a security playbook to document a simulated incident, following 
 structured steps to record what happened, who was involved, and what 
 actions were taken in response. This mirrors the real workflow a Tier 1 
 SOC analyst follows when triaging and responding to alerts.
 
-### Module 2 - Network monitoring and analysis
-- This module introduced network traffic analysis and gave hands-on experience 
-with two of the most important tools a SOC analyst uses — Wireshark for 
-GUI-based packet analysis and tcpdump for command line packet capture in Linux.
+**Phishing Email Triage**
+- Identified red flags: domain mismatch, urgent language, suspicious links, credential requests. 
 
-**Key Definitions:**
-- Network Traffic — the data transmitted across a network between devices
-- Network Data — the actual content and metadata captured in network packets
-- Indicators of Compromise (IoC) — evidence that suggests a system or network 
-may have been breached, such as unusual traffic patterns or unexpected 
-connections to external IPs
-- Data Exfiltration — the unauthorized transfer of data from a system to an 
-external destination, often a goal of attackers after gaining access
+**Security Concepts Mastered**
+- Asset classification & data lifecycle
+- Risk = Likelihood × Severity scoring
+- SHA-256 integrity verification
+- Symmetric/asymmetric encryption (PKI)
+- OWASP Top 10 (injection, XSS, broken access control)
+- Social engineering lifecycle (prepare/trust/persuade/disconnect)
+- Malware taxonomy (11 types including fileless/rootkits)
+- Defense in depth (5 layers)
+- Threat modeling (PASTA, attack trees)
 
-**Components of a Packet:**
-A packet consists of a header, payload, and footer.
-The header contains metadata about the packet while the payload is the 
-actual data being transmitted.
+## ✅ Course 6 - Detection & Response
 
-**IPv4 Header Fields:**
-- Source and destination IP addresses
-- Protocol type (TCP, UDP, ICMP)
-- Time to Live (TTL) — limits how long a packet travels before being discarded
-- Version, length, and checksum fields
+Key Skills: Packet analysis, SIEM workflow, IDS rules, incident triage, log analysis
 
-**IPv6 Header Fields:**
-Similar to IPv4 but with a larger address space and simplified header 
-structure. Removes checksum field and adds flow label for better routing.
-
-**Wireshark Packet Property Columns:**
-- No. — index number of the packet in the capture file
-- Time — timestamp of when the packet was captured
-- Source — the source IP address
-- Destination — the destination IP address
-- Protocol — the protocol contained in the packet
-- Length — total length of the packet
-- Info — summary of the payload data as interpreted by Wireshark
-
-![Wireshark packet property columns](assets/property-column-packet.png)
-
-**Wireshark Filter Operators:**
-- Comparison — filters by specific values, e.g. ip.addr == 192.168.1.1
-- Contains — searches for a string within a field, e.g. http contains "GET"
-- Matches — uses regex to match patterns within packet data
-
-**tcpdump Commands:**
-- sudo tcpdump -i eth0 — capture live traffic on a specific interface
-- sudo tcpdump -i eth0 -w capture.pcap — save capture to a file
-- sudo tcpdump -r capture.pcap — read from a saved capture file
-- sudo tcpdump -i eth0 -c 5 — capture only 5 packets
-- sudo tcpdump port 80 — filter traffic by port
-- sudo tcpdump host 192.168.1.1 — filter traffic by IP address
-
----
-
-**Lab 1 — Wireshark Packet Analysis (Windows VM)**
-In this lab we opened a packet capture file in Wireshark and analyzed network 
-traffic from a user browsing a website. We explored the Wireshark GUI and 
-examined individual packets in detail, viewing the different protocol layers 
-inside each packet. We applied filters to isolate specific traffic including 
-UDP DNS traffic to examine how domain lookups work and TCP traffic to search 
-for specific payload text. This hands-on experience directly mirrors how SOC 
-analysts filter and investigate suspicious network activity during an incident.
+**What I Built & Practiced**
+Packet Analysis Lab - Wireshark Traffic Investigation
+- In this Wireshark lab I analyzed website browsing PCAP: filtered DNS (udp.port == 53), TCP streams, inspected IPv4 headers (source.dest IPs, TTL, protocol).
 
 ![Wireshark applying a filter](assets/applying-fillter-wireshark.png)
 ![Finding the packet arrival time](assets/packet-arrival.png)
@@ -524,89 +190,38 @@ analysts filter and investigate suspicious network activity during an incident.
 ![Filtering ethernet mac traffic](assets/eth-mac-traffic-filter.png)
 ![IP addresses associated with the website](assets/addresses-associated-google.png)
 
-**Lab 2 — tcpdump Packet Capture (Linux VM)**
-In this lab we used tcpdump in a Linux terminal to capture live network 
-traffic, identify active network interfaces, and save captured packets to 
-a pcap file. We then filtered the saved capture to focus on specific types 
-of traffic. This is a core skill for SOC analysts working in Linux environments 
-where GUI tools may not be available.
+What this shows: Core SOC skill for investigating network-based alerts.
+
+**tcpdump Live Capture**
+- In the Linux terminal I captured Linux traffic, identified interfaces (-i eth0), saved PCAPs (-w), filtered by port/host (port 80, host 192.168.1.1).
 
 ![Identifying network interfaces in Linux](assets/identify-network-interfaces-linux.png)
 ![Capturing 5 packets](assets/captured-5-packets.png)
 ![tcpdump with command explanations](assets/tcpdump-command-extra-options.png)
 ![Capturing the packet data](assets/packet-data-captured.png)
 
-### Module 3 - Incident Investigation and Triage
+**IDS Rules & Log Analysis**
+Suricata Custom Rule Testing
+- Wrote/tested custome detection rules against sample.pcap. Analyzed fast.log (alert summary) and eve.json (detailed telemtry)
 
-This module covered how SOC analysts detect threats, investigate incidents, 
-and maintain proper documentation throughout the process. These are core 
-daily responsibilities for a Tier 1 SOC analyst.
+![Suricata Signature](assets/suricata-signature.png)
+![Suricata commands and explanations](assets/suricata-commands.png)
+![Sruicata log alert](assets/log-alert-suricata.png)
+![jq command](assets/jq-command.png)
 
-**Methods of Detection:**
+What this shows: Rule creation and log interpretation for threat hunting. 
 
-- Threat Hunting — a proactive approach where analysts actively search 
-through networks and systems for signs of malicious activity that automated 
-tools may have missed. Unlike reactive monitoring, threat hunting assumes 
-a breach may already exist and works to find it.
+**Advanced SOC Concepts Practiced**
+- SIEM workflow (collect/normalize/analyze)
+- Packet structure (header/payload/footer)
+- Wireshark filters (ip.addr==, udp.port==53, http contains)
+- tcpdump syntax (-i, -w, -c, port, host)
+- IDS rule anatomy (action/header/options)
+- Suricata logs (fast.log, eve.json)
+- Threat hunting vs reactive monitoring
+- Chain of custody documentation
+- TTPs analysis
+- False/true positive triage
 
-- Threat Intelligence — the collection and analysis of information about 
-current and emerging threats. Helps analysts understand attacker tactics, 
-techniques, and procedures (TTPs) to better detect and respond to attacks.
-Sources include open source intelligence (OSINT), commercial feeds, and 
-government advisories like CISA alerts.
+## Course 7 - Automate Cybersecurity Tasks with Python *(In progress)*
 
-- Cyber Deception — a defensive technique that uses decoys like honeypots 
-and honeynets to lure attackers away from real assets. When an attacker 
-interacts with a decoy, it generates an alert and reveals their tactics 
-without them knowing they've been detected.
-
-**Common IoCs in CI/CD Pipelines:**
-CI/CD (Continuous Integration/Continuous Deployment) pipelines are 
-increasingly targeted since they have privileged access to production systems.
-Common indicators of compromise include:
-- Unauthorized code changes — unexpected modifications to source code 
-or configuration files
-- Suspicious deployment patterns — deployments happening at unusual times 
-or to unexpected environments
-- Compromised dependencies — malicious packages introduced through 
-third party libraries
-- Unusual pipeline execution — jobs running unexpectedly or with 
-elevated permissions not previously seen
-- Secrets exposure attempts — attackers trying to extract API keys, 
-passwords, or tokens stored in pipeline environment variables
-
-**Chain of Custody:**
-The documented and unbroken record of who collected, handled, transferred, 
-and analyzed evidence during a security investigation. Maintaining chain of 
-custody is critical because it ensures evidence is admissible and trustworthy 
-if the incident leads to legal proceedings.
-
-**Broken Chain of Custody:**
-Occurs when evidence handling cannot be fully accounted for, meaning 
-the integrity of the evidence can no longer be guaranteed. This can 
-compromise investigations and make evidence inadmissible in court.
-
-**Triage Process:**
-The structured process SOC analysts use to prioritize and respond to 
-security alerts efficiently:
-- Receive and Assess — analyst receives the alert and performs an 
-initial review to determine if it is a true or false positive
-- Assign Priority — based on the potential impact and urgency, the 
-alert is assigned a priority level to determine how quickly it needs 
-to be addressed
-- Collect and Analyze — gather relevant data from logs, network traffic, 
-and affected systems to investigate the alert and determine the full 
-scope of the incident
-
-**Additional Concepts:**
-- TTPs (Tactics, Techniques, and Procedures) — the specific methods 
-and patterns used by threat actors to carry out attacks. Understanding 
-TTPs helps analysts anticipate attacker behavior and improve detection rules.
-- False Positive — an alert that appears to indicate a threat but is 
-actually benign activity. A significant portion of a Tier 1 SOC analyst's 
-job is distinguishing false positives from real threats.
-- True Positive — a confirmed alert where malicious activity has actually 
-occurred and requires a response.
-- Escalation — when a Tier 1 analyst determines an incident is beyond 
-their scope they escalate it to Tier 2 or Tier 3 analysts for deeper 
-investigation.
