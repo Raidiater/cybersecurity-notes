@@ -223,5 +223,103 @@ What this shows: Rule creation and log interpretation for threat hunting.
 - TTPs analysis
 - False/true positive triage
 
-## Course 7 - Automate Cybersecurity Tasks with Python *(In progress)*
+![Course 6 Certification](certificates/course-six-cert.png)
+
+## ✅ Course 7 - Automate Cybersecurity Tasks with Python
+
+**Key Skills:** File I/O automation, regex log parsing, IP allow/block lists, access control algorithms, production sysadmin scripting
+
+**What I Learned**
+- Python fundamentals: variables, lists, functions, loops, conditionals
+- File handling (`with` statements, read/write/verify)
+- Regular expressions for log parsing
+- List manipulation and automation algorithms
+- Debugging production scripts
+
+### 1. Access Control Algorithm (User + Device Validation)
+**Task:** In the lab the task was to practice building a security gatekeeper validating username against approved list AND matching device ID.
+
+**Code:**
+```python
+approved_users = ["elarson", "bmoreno", "sgilmore", "eraab", "gesparza"]
+approved_devices = ["8rp2k75", "hl0s5o1", "4n482ts", "a307vir", "3rcv4w6"]
+username = "sgilmore"
+device_id = "4n482ts"
+ind = approved_users.index(username)
+
+if username in approved_users and device_id == approved_devices[ind]:
+    print("The user", username, "is approved to access the system.")
+    print(device_id, "is the assigned device for", username)
+elif username in approved_users and device_id != approved_devices[ind]:
+    print("The user", username, "is approved but", device_id, "is not their device.")
+```
+
+**What this shows:** This shows multi-factor validation (user + device) before network access. Scales to MFA, endpoint verification.
+
+### 2. IP Threat Hunting (Regex Log Parsing + Flagged Lists) ⭐
+**Task:** The task for this lab was to parse messy authentication logs → extract IPs with regex → flag known bad actors.
+
+**Code:**
+```python
+import re
+log_file = "eraab 2022-05-10 6:03:41 192.168.152.148 \\niuduike..."
+pattern = "\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}"
+valid_ip_addresses = re.findall(pattern, log_file)
+flagged_addresses = ["192.168.190.178", "192.168.96.200", "192.168.174.117"]
+
+for address in valid_ip_addresses:
+    if address in flagged_addresses:
+        print("FLAGGED:", address, "→ Further analysis required")
+    else:
+        print("CLEAN:", address)
+```
+
+**What this shows:** SIEM log ingestion → automated threat hunting → alert triage workflow.
+
+### 3. IP Allow List Management (Production File Automation) ⭐
+**Task:** In this lab the task was to make a script to read IP allow list → surgically remove compromised IPs → rewrite production file.
+
+**Code:**
+```python
+def update_file(import_file, remove_list):
+    # Read → Parse → Clean → Write
+    with open(import_file, "r") as file:
+        ip_addresses = file.read().split()
+    for bad_ip in remove_list:
+        if bad_ip in ip_addresses:
+            ip_addresses.remove(bad_ip)
+    with open(import_file, "w") as file:
+        file.write(" ".join(ip_addresses))
+
+update_file("allow_list.txt", ["192.168.25.60", "192.168.140.81", "192.168.203.198"])
+```
+
+**What this shows:** Incident response automation (revoke attacker IPs from firewall during breach).
+
+### 4. File I/O Pipeline (Create → Read → Verify)
+**Task:** The task for this lab was to build an algorithim to create + verify production allow list files.
+
+**Code:**
+```python
+import_file = "data/allow_list.txt"
+ip_addresses = "192.168.218.160 192.168.97.225 192.168.145.158..."
+
+# WRITE production file
+with open(import_file, "w") as file:
+    file.write(ip_addresses)
+
+# READ + verify
+with open(import_file, "r") as file:
+    text = file.read()
+print(text)  # Confirmed persistence
+```
+
+**What this shows:** Complete file lifecycle automation for sysadmin workflows.
+
+## **SOC/SysAdmin Impact**
+Built complete automation pipeline: **Log parsing → Threat hunting → Allow list management → File persistence**. Ready for Splunk/ELK integration, firewall automation, endpoint management.
+
+**Tools Mastered:** Python 3.x, regex, file I/O, list algorithms, debugging
+
+![Course 7 Certification](certificates/course-seven-cert.png)
 
