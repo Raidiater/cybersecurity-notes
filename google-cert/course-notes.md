@@ -323,3 +323,130 @@ Built complete automation pipeline: **Log parsing → Threat hunting → Allow l
 
 ![Course 7 Certification](certificates/course-seven-cert.png)
 
+## ✅ Course 8 - Put It to Work: Prepare for Cybersecurity Jobs
+
+Key Skills: Incident escalation, stakeholder communication, 
+job search strategy, professional development
+
+**What I Learned**
+
+**Incident Escalation & Classification**
+- Learned how SOC analysts classify incidents by severity and urgency 
+to determine when to escalate to Tier 2 or higher
+- Practiced identifying which incidents require immediate escalation 
+versus which can be handled at Tier 1
+- Reviewed how miscommunicating or failing to escalate an incident 
+can directly impact an organization's security posture
+
+What this shows: Understanding of SOC team structure and when to 
+escalate — a critical judgment call for Tier 1 analysts that 
+interviewers frequently ask about.
+
+**Stakeholder Communication**
+- Learned how to communicate security incidents clearly to both 
+technical and non-technical stakeholders
+- Practiced writing concise incident summaries that convey impact 
+without unnecessary technical jargon
+- Reviewed how effective communication during an incident reduces 
+response time and minimizes damage
+
+What this shows: Written and verbal communication skills are 
+consistently ranked as one of the top qualities hiring managers 
+look for in SOC analyst candidates alongside technical skills.
+
+**Security Mindset & Professional Development**
+- Reviewed how to engage with the security community through 
+platforms like LinkedIn, security blogs, and industry publications
+- Learned the importance of continuously updating knowledge as 
+the threat landscape evolves
+- Discussed the value of professional networks, mentorship, and 
+staying current with tools like CISA advisories and threat feeds
+
+What this shows: Demonstrates awareness that cybersecurity 
+requires continuous learning beyond certifications and coursework.
+
+**SOC Career Pathway**
+- Reviewed the tiered SOC structure and how analysts progress 
+from Tier 1 through Tier 3 into specialized roles like incident 
+responder, threat hunter, and security engineer
+- Learned what hiring managers look for in entry level SOC candidates 
+including hands-on tool experience, certifications, and a documented 
+portfolio of work
+- Practiced preparing for cybersecurity interviews including how to 
+discuss labs, projects, and technical experience confidently
+
+What this shows: Clear understanding of where a Tier 1 SOC analyst 
+role fits in a broader security career and how to present experience 
+effectively to employers.
+
+**Core Concepts Covered**
+- Incident severity classification and escalation thresholds
+- Stakeholder communication frameworks
+- SOC tier structure (Tier 1 → Tier 2 → Tier 3)
+- Professional development resources and security communities
+- Interview preparation for entry level security roles
+
+![Course 8 Certification](certificates/course-eight-cert.png)
+
+## ✅ Course 9 - AI in Cybersecurity Job Search & Career Development
+
+Key Skills: AI-assisted job searching, resume optimization, 
+interview preparation, professional development
+
+**What I Learned**
+
+**Using AI for Job Search**
+- Learned how to use AI tools to identify relevant job postings 
+and filter roles that match specific skills and experience levels
+- Practiced using AI to research target companies, understand their 
+security posture, and tailor applications accordingly
+- Reviewed how AI can help identify keywords in job descriptions 
+to optimize resume language for applicant tracking systems (ATS)
+
+What this shows: Modern job search literacy — understanding how 
+to use available tools efficiently is a practical skill employers 
+value in candidates who need to stay current with evolving technology.
+
+**AI-Assisted Resume Optimization**
+- Learned how to use AI to align resume language with specific 
+job descriptions without misrepresenting experience
+- Practiced identifying gaps between a job posting's requirements 
+and current skills to prioritize what to learn next
+- Reviewed how ATS systems filter resumes before human review 
+and how to ensure a resume passes automated screening
+
+What this shows: Awareness of how modern hiring works end to end, 
+from ATS filtering to human review, and how to position experience 
+effectively at each stage.
+
+**Interview Preparation with AI**
+- Practiced using AI to generate likely interview questions based 
+on specific job descriptions and then preparing structured answers
+- Learned the STAR method (Situation, Task, Action, Result) for 
+answering behavioral interview questions with concrete examples
+- Reviewed how to prepare technical answers for common SOC analyst 
+interview topics like explaining the triage process, describing 
+how SIEM works, and walking through a past lab or project
+
+What this shows: Structured interview preparation using available 
+tools demonstrates initiative and seriousness about landing a role 
+— qualities that stand out at the entry level.
+
+**Core Concepts Covered**
+- ATS (Applicant Tracking System) optimization
+- AI-assisted job search and company research
+- Resume tailoring to specific job descriptions
+- STAR method for behavioral interview answers
+- Technical interview preparation for SOC analyst roles
+
+![Course 9 Certification](certificates/course-nine-cert.png)
+
+## Reflection
+
+Completing the Google Cybersecurity Certificate marked my first major milestone toward a career in security operations. Across nine courses I built a foundation in network security, Linux administration, cryptography, threat detection, and incident response, and more importantly I documented the hands-on work to prove it.
+
+This is the first of many steps for me in my journey, I will move onto TryHackMe, building a home SIEM lab,to start studying for my CompTIA Security+ certificate and IS2 CC cert. My goal is to gain even more valuable expierence so I can apply them and stregnthen them for future internships and jobs. I'm eager to dive deep into this field!
+
+This repository will continue to grow as I do, more will come. 
+
+![The Full Google Cybersecurity Certificate!](certificates/Google-cyber-cert.png)

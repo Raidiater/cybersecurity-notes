@@ -1,20 +1,21 @@
-# Cybersecurity-notes Learning Notes
+# Cybersecurity Learning Notes 🔐
 
-I am a 2nd year Computing & Security Technology student at Drexel University!
-I will be documenting my learning journey as I work toward a SOC Analyst role.
+2nd year Computing & Security Technology student at Drexel University 
+documenting my learning journey toward a SOC Analyst role.
 
-## Certifications
-- [ ] Google Cybersecurity Certificate *(In Progress)*
-- [ ] CompTIA Security+ SYO-701
+## 📚 Certifications
+- [x] Google Cybersecurity Certificate ✅ — April 2026
+- [ ] CompTIA Security+ SY0-701 *(In Progress)*
 
-## TryHackMe
-- [ ] Pre-Security Oath
+## 🔵 TryHackMe
+- [ ] Pre-Security Path *(In Progress)*
 - [ ] SOC Level 1 Path
 
-## Home Labs
-- [ ] SIEM Lab *(Planned late Spring - Early Summer 2026)* 
+## 🏠 Home Labs
+- [ ] SIEM Lab *(Planned — Summer 2026)*
 
-## Repository Structure
-- `google-cert/` - Notes and key terms from the Google Cybersecurity Cert
-- `tryhackme/` - Notes and room completions from TryHackMe
-- `security-plus/` - Study notes for CompTIA Seucrity+ 
+## 📂 Repository Structure
+- `google-cert/` — Full portfolio of notes, labs, and screenshots 
+from the Google Cybersecurity Certificate
+- `tryhackme/` — Notes and room completions from TryHackMe
+- `security-plus/` — Study notes for CompTIA Security+
