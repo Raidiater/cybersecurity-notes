@@ -196,4 +196,321 @@ delivered to the correct destination.
 within a network to be logically separated into subsections,
 improving security and reducing broadcast traffic.
 
-## Pre-Security - How the Web Works 
+## How The Web Works
+
+Key Skills: DNS resolution, HTTP methods, URL structure, 
+web technologies, status codes
+
+---
+
+### DNS and Domain Hierarchy
+
+When you type a website into your browser the DNS system acts as 
+the internet's phone book — translating human readable domain names 
+into IP addresses that computers can actually use.
+
+![How the web works — DNS to web server flow](Labs_assets/How-the-web-works.png)
+
+**Domain Hierarchy:**
+- **TLD (Top Level Domain)** — the far right part of a domain 
+like .com, .org, or .gov. Each TLD has its own registry managing 
+which domains can be registered under it
+- **Second Level Domain** — the recognizable part of the domain 
+like "google" in google.com, limited to 63 characters
+- **Subdomain** — sits to the left of the second level domain 
+like "shop" in shop.google.com, used to organize different 
+sections of a website
+
+**DNS Record Types:**
+- **A Record** — maps a domain to an IPv4 address
+- **AAAA Record** — maps a domain to an IPv6 address
+- **CNAME Record** — maps a domain to another domain name 
+rather than an IP address, commonly used for subdomains
+- **MX Record** — directs email to the correct mail server 
+for a domain
+- **TXT Record** — stores arbitrary text data, commonly used 
+for domain verification and email security configurations
+
+**Lab — DNS Record Lookup with nslookup:**
+Used nslookup to query different DNS record types for a target 
+domain. Queried CNAME records to find that shop.website.thm 
+pointed to shops.myshopify.com, TXT records to retrieve hidden 
+text data, MX records to identify the mail server, and A records 
+to resolve a subdomain to its IP address. This mirrors how SOC 
+analysts investigate suspicious domains during threat intelligence 
+work.
+
+![CNAME and TXT record lookup](Labs_assets/CNAME-TXT-lab1.png)
+![MX and A record lookup](Labs_assets/MX-A-lab1.png)
+
+---
+
+### HTTP, URLs, and Web Methods
+
+HTTP (HyperText Transfer Protocol) is the set of rules used to 
+communicate data across the web. Every time you load a webpage 
+your browser is making HTTP requests and receiving responses.
+
+**Anatomy of a URL:**
+A URL contains several components that tell the browser exactly 
+where to go and what to do.
+
+![Parts of a URL breakdown](Labs_assets/parts-of-URL.png)
+
+- **Scheme** — the protocol being used (http or https)
+- **User** — optional credentials passed in the URL
+- **Host/Domain** — the website address
+- **Port** — the port to connect to (defaults to 80 for HTTP, 
+443 for HTTPS)
+- **Path** — the specific page or resource being requested
+- **Query String** — additional data sent to the server 
+(e.g. ?id=1)
+- **Fragment** — references a specific section within the page
+
+**HTTP Methods:**
+- **GET** — retrieves data from a server without modifying it. 
+Used every time you load a webpage or request a resource
+- **POST** — sends data to a server to create something new, 
+like submitting a login form or creating an account
+- **PUT** — sends data to a server to update an existing 
+resource
+- **DELETE** — removes a resource from the server
+
+**HTTP Status Codes:**
+- **200 OK** — request succeeded
+- **201 Created** — resource successfully created
+- **301 Moved Permanently** — resource has permanently moved 
+to a new URL
+- **302 Found** — temporary redirect
+- **404 Not Found** — resource doesn't exist
+- **403 Forbidden** — no permission to access the resource
+- **500 Internal Server Error** — server side error
+
+**Lab — HTTP Methods in Practice:**
+Practiced making GET, POST, and PUT requests to a simulated 
+web server and analyzed the request and response headers. 
+
+A GET request to /room returned a 200 response with HTML 
+content confirming successful retrieval.
+
+![GET request and response](Labs_assets/GET-request.png)
+
+A POST request to /login submitted credentials in the request 
+body and returned a 200 response confirming successful 
+authentication. This demonstrates how login forms transmit 
+data and why POST is used instead of GET for sensitive 
+information — GET requests append data to the URL which 
+would expose credentials in plaintext.
+
+![POST login request](Labs_assets/login-POST.png)
+
+A PUT request to /user/2 updated a username to admin and 
+returned a 200 confirmation. This demonstrates how attackers 
+can abuse unsecured PUT endpoints to escalate privileges — 
+a common web application vulnerability.
+
+![PUT request updating username](Labs_assets/PUT-request.png)
+![User successfully updated](Labs_assets/user-updated.png)
+
+Used browser developer tools to inspect live HTTP GET requests 
+and response headers on a locally hosted web application, 
+identifying status codes, content types, file sizes, and 
+load times for each resource.
+
+![Viewing GET requests in browser dev tools](Labs_assets/viewing-GET.png)
+![Inspecting GET request headers](Labs_assets/inspecting-GET.png)
+
+---
+
+### Web Technologies — HTML, CSS, JavaScript
+
+Websites are built from three core technologies that work 
+together to create what users see and interact with.
+
+- **HTML** — the structure and content of a webpage. Every 
+element like headings, paragraphs, images, and forms is 
+defined in HTML
+- **CSS** — controls the visual styling and layout. Colors, 
+fonts, spacing, and positioning are all CSS
+- **JavaScript** — adds interactivity and dynamic behavior. 
+Form validation, animations, and real-time updates are 
+handled by JavaScript
+
+**Lab — HTML and Source Code Analysis:**
+Practiced writing basic HTML structure and rendering it in 
+the browser. Also inspected the source code of a vulnerable 
+website and discovered credentials left in an HTML comment 
+by a developer — a classic information disclosure 
+vulnerability that SOC analysts and penetration testers 
+actively look for during web application assessments.
+
+![HTML lab — building a basic webpage](Labs_assets/HTML-lab.png)
+![Rendered webpage output](Labs_assets/webpage.png)
+![Source code revealing credentials in HTML comment](Labs_assets/source-code.png)
+
+**SOC relevance:** Developers accidentally leaving credentials, 
+API keys, or sensitive information in HTML comments or 
+JavaScript files is a real and common vulnerability. During 
+incident investigations analysts often review page source 
+to identify information that shouldn't be publicly visible.
+
+---
+
+## Computer Fundamentals
+
+Key Skills: Computer hardware components, boot process, 
+client-server model, virtualization
+
+---
+
+### Computer Hardware and the Boot Process
+
+Understanding what's inside a computer and how it starts up 
+is foundational knowledge for anyone working in IT or security.
+
+**Core Hardware Components:**
+- **Motherboard** — the main circuit board connecting all 
+components together
+- **CPU** — the brain of the computer, processes all 
+instructions
+- **RAM** — temporary memory that stores data actively 
+being used
+- **GPU** — handles graphics processing
+- **SSD/HDD** — permanent storage for the operating system, 
+files, and applications
+- **PSU** — converts power from the wall outlet to usable 
+power for components
+- **I/O** — input/output interfaces like USB ports, display 
+outputs, and network interfaces
+
+**What Happens When You Press Start:**
+1. Power button sends signal to PSU
+2. Firmware (BIOS/UEFI) initializes and starts
+3. POST (Power-On Self Test) checks that hardware is working
+4. Boot device is selected based on boot order
+5. Bootloader starts and loads the operating system
+
+**SOC relevance:** Understanding the boot process matters 
+for security because attacks like bootkits and rootkits 
+target the firmware and bootloader stages specifically 
+because they execute before the operating system and 
+security tools load — making them extremely difficult 
+to detect.
+
+---
+
+### Client-Server Model
+
+The client-server model is the foundation of how virtually 
+every networked application works — from websites to 
+corporate internal tools.
+
+**Key Concepts:**
+- **Client** — the device or application requesting a service
+- **Server** — the device or application providing the service
+- **Request** — the message a client sends to a server 
+asking for something
+- **Response** — the server's reply containing the requested 
+data or a status
+- **Protocol** — the agreed set of rules governing how 
+client and server communicate
+- **Port** — the specific channel through which the 
+communication occurs
+- **DNS** — translates domain names to IP addresses so the 
+client can find the server
+
+**GET Method deep dive:**
+Every webpage load starts with a GET request. The client 
+sends a request including the path, host, and user agent. 
+The server responds with a status code and the requested 
+content. Understanding this flow is essential for analyzing 
+web traffic in Wireshark or a SIEM.
+
+---
+
+## Operating Systems Basics (WIP)
+
+Key Skills: OS types, kernel vs user space, Windows and 
+Linux environments, virtualization
+
+---
+
+### Operating System Types
+
+An operating system manages hardware resources and provides 
+a platform for applications to run. Different environments 
+require different types of operating systems.
+
+- **Desktop OS** — designed for personal computers with 
+a graphical user interface. Examples: Windows, macOS, 
+Ubuntu Desktop
+- **Server OS** — optimized for reliability, performance, 
+and running services continuously without a GUI. 
+Examples: Windows Server, Ubuntu Server, Red Hat 
+Enterprise Linux
+- **Mobile OS** — designed for touchscreen devices with 
+limited resources. Examples: Android, iOS
+- **Embedded OS** — runs on specialized hardware with 
+a single dedicated function. Examples: firmware in 
+routers, smart TVs, industrial controllers
+- **Virtual/Cloud OS** — runs as a virtual machine on 
+shared physical hardware, enabling multiple isolated 
+environments on one physical server
+
+**SOC relevance:** Most enterprise environments run a mix 
+of all of these. SOC analysts need to understand each type 
+because the logs, vulnerabilities, and attack surfaces 
+differ significantly across operating system categories.
+
+---
+
+### Kernel Space vs User Space
+
+The operating system divides its operations into two 
+protected areas:
+
+- **Kernel Space** — the core of the operating system 
+where privileged operations happen. The kernel directly 
+controls hardware, memory management, and process 
+scheduling. Code running here has unrestricted access 
+to system resources — which is why kernel-level malware 
+like rootkits are so dangerous
+- **User Space** — where all user applications run. 
+Programs here have restricted access and must request 
+kernel resources through system calls. Crashes in user 
+space are contained — crashes in kernel space bring 
+down the entire system
+
+**SOC relevance:** Understanding this distinction matters 
+for malware analysis. Rootkits that operate in kernel 
+space are significantly more dangerous and harder to 
+detect than user space malware because they can hide 
+their presence from security tools running at the 
+user level.
+
+---
+
+### Labs — Windows and Linux Environments
+
+**Windows VM Lab:**
+Accessed a Windows 10 environment and explored core 
+built-in security and system tools including Windows 
+Security, Windows Defender, Task Manager, Control Panel, 
+and system information. Getting comfortable navigating 
+Windows as an operating environment is essential since 
+most enterprise SOC environments are Windows-based.
+
+![Windows 10 VM desktop environment](Labs_assets/windows_vm.png)
+
+**Virtualization Manager Lab:**
+Explored a virtualization management interface showing 
+multiple virtual machines in different states — running, 
+stopped, and provisioned. Managed VM lifecycle including 
+provisioning, starting, stopping, and monitoring resource 
+allocation across CPU, memory, and disk. Understanding 
+virtualization is increasingly important for SOC analysts 
+as enterprise environments move workloads to virtual 
+and cloud infrastructure.
+
+![Virtualization manager showing VM inventory](Labs_assets/VM.png)
+
