@@ -428,7 +428,7 @@ web traffic in Wireshark or a SIEM.
 
 ---
 
-## Operating Systems Basics (WIP)
+## Operating Systems Basics 
 
 Key Skills: OS types, kernel vs user space, Windows and 
 Linux environments, virtualization
@@ -501,10 +501,11 @@ Windows as an operating environment is essential since
 most enterprise SOC environments are Windows-based.
 
 ![Windows 10 VM desktop environment](Labs_assets/windows_vm.png)
+![Windows 10 Command Line and ipconfig command](Labs_assets/ipconfigwindows.png)
 
 **Virtualization Manager Lab:**
 Explored a virtualization management interface showing 
-multiple virtual machines in different states — running, 
+multiple virtual machines in different states like running, 
 stopped, and provisioned. Managed VM lifecycle including 
 provisioning, starting, stopping, and monitoring resource 
 allocation across CPU, memory, and disk. Understanding 
@@ -514,3 +515,100 @@ and cloud infrastructure.
 
 ![Virtualization manager showing VM inventory](Labs_assets/VM.png)
 
+**Switching Users Ubuntu Lab:**
+In this lab we began with root access and practiced switching
+between user accounts. We identified weak credentials on the sammie 
+account through manual password guessing using commonly used and 
+insecure password patterns. After gaining access we reviewed the 
+command history to recover the root password which demonstrates how 
+poor password hygiene and unsanitized command histories can expose 
+privileged credentials to attackers.
+
+![Switching User](Labs_assets/switchinguser.png)
+
+---
+
+## Software Basics
+
+Key Skills: Data representation, encoding standards, Python scripting,
+JavaScript fundamentals, SQL querying
+
+---
+
+### Data Representation and Encoding
+
+Computers store and transmit everything as numbers. This section
+covered how data is represented at the binary level and how
+encoding standards allow those numbers to be interpreted as
+human-readable characters. 
+
+**Binary and Hexadecimal** These are the two foundational number systems
+used in computing. Binary (base-2) is how data is physically stored
+at the hardware level. Hexadecimal (base-16) is used as a more
+human-readable shorthand for binary values, which is commonly seen in
+memory addresses, color codes, and network packet analysis.
+
+**Character Encoding** is how characters are assigned to numeric
+values so computers can store and transmit text:
+- **ASCII** — one of the earliest encoding standards, mapping
+128 characters including English letters, digits, punctuation,
+and control characters to numeric values
+- **UTF-8, UTF-16, UTF-32** — modern Unicode encoding standards
+that extend beyond ASCII to support virtually every character
+and symbol across all languages using variable byte lengths
+
+**SOC relevance:** Understanding encoding is directly applicable
+to security work since attackers frequently use encoding techniques
+like Base64 or hex encoding to obfuscate malicious payloads
+and evade detection. Recognizing encoded data in logs and
+network traffic is a core analyst skill.
+
+---
+
+### Python — Number Guesser Script
+
+Practiced Python fundamentals by reviewing an interactive number
+guessing script. The program generates a target number and
+provides directional hints such as higher or lower, until the user
+guesses correctly. This exercise reinforced conditional logic,
+user input handling, and control flow in Python.
+
+![Python number guesser lab](Labs_assets/pythonguesserlab.png)
+
+---
+
+### JavaScript — Interactive Demo
+
+The same number guessing logic in JavaScript as a demo to
+understand how the same programming concepts translate across
+languages. JavaScript runs client-side in the browser making
+it the primary language for web application interactivity 
+and one of the most common attack surfaces in web security
+through vulnerabilities like XSS.
+
+![JavaScript number guesser demo](Labs_assets/javascriptlab.png)
+
+---
+
+### SQL — Database Querying Lab
+
+Practiced writing SQL queries against a simulated coffee shop
+database to retrieve and filter data across multiple tables.
+Worked through progressively complex queries using SELECT,
+WHERE, JOIN, and filtering conditions to extract specific
+records from the menu database.
+
+![SQL query — basic SELECT](Labs_assets/sqlquery1.png)
+![SQL query — filtering results](Labs_assets/sqlquery2.png)
+![SQL query — multiple conditions](Labs_assets/sqlquery3.png)
+![SQL query — advanced filtering](Labs_assets/sqlquery4.png)
+
+**SOC relevance:** SQL knowledge is directly applicable to
+security work since SIEM platforms use query languages built on
+SQL like syntax, and understanding how databases are structured
+helps analysts investigate SQL injection attacks and query
+security logs stored in relational databases.
+
+---
+
+## Attacks and Defenses
