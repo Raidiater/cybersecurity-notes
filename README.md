@@ -8,11 +8,11 @@ documenting my learning journey toward a SOC Analyst role.
 - [ ] CompTIA Security+ SY0-701 *(In Progress)*
 
 ## 🔵 TryHackMe
-- [ ] Pre-Security Path *(In Progress)*
+- [x] Pre-Security Path ✅ - July 2026
 - [ ] SOC Level 1 Path
 
 ## 🏠 Home Labs
-- [ ] SIEM Lab *(Planned — Summer 2026)*
+- [ ] SIEM Lab *(Planned — Summer/Fall 2026)*
 
 ## 📂 Repository Structure
 - `google-cert/` — Full portfolio of notes, labs, and screenshots 

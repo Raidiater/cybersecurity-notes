@@ -612,3 +612,161 @@ security logs stored in relational databases.
 ---
 
 ## Attacks and Defenses
+
+Key Skills: CIA Triad, cryptography fundamentals, offensive tools,
+defensive security mindset, credential attacks, directory enumeration
+
+---
+
+### CIA Triad
+
+The CIA Triad is the foundational framework that every security 
+decision is measured against. All three principles must be maintained 
+to consider a system truly secure.
+
+- **Confidentiality** — ensuring only authorized users can access 
+sensitive data. Enforced through encryption, access controls, 
+and authentication
+- **Integrity** — ensuring data is accurate and has not been 
+tampered with. Enforced through hashing, digital signatures, 
+and audit logs
+- **Availability** — ensuring systems and data are accessible 
+when needed by authorized users. Protected through redundancy, 
+backups, and DDoS mitigation
+
+![CIA Triad Image](Labs_assets/ciatriad.png)
+
+**SOC relevance:** Every security incident can be categorized 
+by which pillar of the CIA Triad it violates. A ransomware 
+attack violates availability. A data breach violates 
+confidentiality. File tampering violates integrity. This 
+framework helps analysts quickly assess the impact and 
+priority of an incident.
+
+---
+
+### Cryptography Fundamentals
+
+Cryptography is the practice of securing information by 
+transforming it into an unreadable format. Understanding 
+how encryption works is essential for both securing systems 
+and investigating attacks.
+
+**Core Concepts:**
+- **Plaintext** — the original readable data before encryption
+- **Ciphertext** — the scrambled unreadable output after 
+encryption is applied
+- **Key** — the secret value used by the encryption algorithm 
+to transform plaintext into ciphertext and back
+- **Encryption** — the process of converting plaintext into 
+ciphertext using a key and an algorithm
+- **Decryption** — the reverse process of converting ciphertext 
+back into plaintext using the correct key
+
+**Caesar Cipher Lab:**
+Practiced encryption and decryption using the Caesar cipher which 
+is one of the earliest known encryption methods. Applied a shift 
+key of 3 to decrypt the ciphertext "DWWDFN WRPRUURZ" back 
+to its plaintext form "ATTACK TOMORROW." This demonstrated 
+the core concept of symmetric encryption where the same key 
+is used for both encryption and decryption.
+
+![Caesar cipher decryption lab](Labs_assets/cipertool.png)
+
+**Why this matters:** While the Caesar cipher is far too weak 
+for real security use, it illustrates the fundamental principle 
+behind all symmetric encryption algorithms. Modern equivalents 
+like AES use the same concept but with mathematically complex 
+operations that make brute force decryption computationally 
+infeasible without the key.
+
+---
+
+### Offensive Security Labs
+
+These labs simulated real attack techniques used by threat 
+actors to gain unauthorized access to systems — the same 
+techniques SOC analysts monitor for and defend against daily.
+
+**Lab 1 — Directory Enumeration with Gobuster:**
+Used Gobuster to perform automated directory enumeration 
+against a target web application. Gobuster brute forces 
+URL paths using a wordlist to discover hidden pages and 
+directories that aren't publicly linked. The scan identified 
+a /login endpoint returning a 200 status code while the 
+/admin path returned a 404 — revealing the attack surface 
+of the application without triggering obvious alerts.
+
+![Gobuster directory enumeration against target](Labs_assets/gobustercommand.png)
+
+**SOC relevance:** Directory enumeration is one of the most 
+common reconnaissance techniques attackers use before 
+attempting exploitation. SOC analysts detect this by 
+monitoring for unusually high volumes of 404 responses 
+from a single source IP in web server logs, and that's
+a clear indicator of automated scanning activity.
+
+**Lab 2 — Credential Brute Force with Hydra:**
+Used Hydra to execute an automated credential stuffing 
+attack against the login form of a target web application. 
+Hydra systematically tested a wordlist of commonly used 
+passwords against the admin account via HTTP POST form 
+submission, which cycles through passwords like 123456, 
+password, iloveyou, and princess among thousands of 
+attempts. This demonstrated how attackers exploit weak 
+and commonly reused passwords to gain unauthorized access.
+
+![Hydra brute force attack against login form](Labs_assets/hydracommand.png)
+
+**SOC relevance:** Credential brute force attacks are 
+among the most frequently detected alert types in a SOC 
+environment. The indicators are distinctive and show a high 
+volume of failed authentication attempts against the same 
+account from the same source IP in a short time window. 
+Detection rules in SIEM platforms like Splunk are commonly 
+built specifically to catch this pattern and trigger alerts 
+for analyst investigation.
+
+---
+
+### Defensive Security Mindset
+
+Effective defense requires a structured and proactive approach 
+rather than simply reacting to incidents as they occur. The 
+defender's mindset follows a continuous improvement cycle:
+
+- **Prevention** — implementing controls to stop attacks 
+before they succeed. Includes firewalls, patch management, 
+MFA, and access controls
+- **Detection** — monitoring systems for indicators of 
+compromise using tools like SIEM, IDS, and EDR platforms
+- **Mitigation** — containing the impact of an active 
+threat to prevent it from spreading or causing further 
+damage
+- **Analysis** — investigating the root cause of an 
+incident to understand how it happened, what was affected, 
+and what the attacker's objectives were
+- **Response** — executing the incident response plan 
+to remediate the threat and restore normal operations
+- **Improvement** — using lessons learned from each 
+incident to strengthen defenses and reduce the likelihood 
+of recurrence
+
+**Why this cycle matters:** No organization can prevent 
+every attack. The goal is to detect threats quickly, 
+contain damage effectively, and continuously improve 
+based on what each incident reveals about gaps in the 
+defensive posture. This is the daily mindset of every 
+SOC analyst and security team.
+
+---
+
+## ✅ Pre-Security Path Complete
+
+Completing the Pre-Security path built the foundational 
+knowledge (and review from the google cyber cert) required for the 
+SOC Level 1 path where I reviewed networking, web fundamentals, 
+operating systems, and core security concepts are now documented 
+with hands-on lab evidence.
+
+**Next:** TryHackMe SOC Level 1
