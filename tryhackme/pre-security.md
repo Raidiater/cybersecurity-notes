@@ -763,6 +763,8 @@ SOC analyst and security team.
 
 ## ✅ Pre-Security Path Complete
 
+![Pre-sec Certification](Labs_assets/pre-sec-cert.png)
+
 Completing the Pre-Security path built the foundational 
 knowledge (and review from the google cyber cert) required for the 
 SOC Level 1 path where I reviewed networking, web fundamentals, 
